@@ -1,0 +1,92 @@
+#{$name}fade-enter-active,
+#{$name}fade-leave-active
+ {
+  transition: opacity 0.5s ease;
+}
+#{$name}fade-enter-from,
+#{$name}fade-leave-to
+{
+  opacity: 0;
+}
+
+.vvm-slide-center-enter-active,
+.vvm-slide-center-leave-active {
+  transform: translate3d(-50%, -50%, 0) scale(0.7);
+  opacity: 0;
+}
+.vvm-slide-center-enter-from,
+.vvm-slide-center-leave-to  {
+  transform: translate3d(-50%, -50%, 0) scale(0.9);
+  // opacity: 0;
+}
+
+//右出现
+.vvm-slide-right-enter-active{
+  transition: all 0.4s ease-out;
+}
+.vvm-slide-right-leave-active {
+  transition: all 0.4s ease-out;
+}
+.vvm-slide-right-enter-from,
+.vvm-slide-right-leave-to {
+  transform: translate(100%, 0);
+}
+
+
+//左出现
+.vvm-slide-left-enter-active{
+  transition: all 0.4s ease-out;
+}
+.vvm-slide-left-leave-active {
+  transition: all 0.4s ease-out;
+}
+.vvm-slide-left-enter-from,
+.vvm-slide-left-leave-to {
+  transform: translate(-100%, 0);
+}
+
+//上出现
+.vvm-slide-top-enter-active{
+  transition: all 0.4s ease-out;
+}
+.vvm-slide-top-leave-active {
+  transition: all 0.4s ease-out;
+}
+.vvm-slide-top-enter-from,
+.vvm-slide-top-leave-to {
+  transform: translate(0, -100%);
+}
+
+
+//下出现
+.vvm-slide-bottom-enter-active{
+  transition: all 0.4s ease-out;
+}
+.vvm-slide-bottom-leave-active {
+  transition: all 0.4s ease-out;
+}
+.vvm-slide-bottom-enter-from,
+.vvm-slide-bottom-leave-to {
+  transform: translate(0, 100%);
+}
+
+.vvm-loading{
+  display: inline-block;
+  animation: rotating 1.3s linear infinite;
+}
+
+@keyframes rotating{
+  0%{-webkit-transform:rotateZ(0);transform:rotateZ(0)}
+  100%{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}
+}
+
+.FormItem-slide-fade-enter-active {
+  transition: all .3s ease;
+}
+.FormItem-slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.FormItem-slide-fade-enter, .FormItem-slide-fade-leave-to {
+  transform: translateX(-10px);
+  opacity: 0;
+}

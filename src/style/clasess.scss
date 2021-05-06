@@ -1,0 +1,97 @@
+/*backgroundColor*/
+// #{$name}default--backgroundColor{
+//     background: $default-color;
+//   }
+//   #{$name}success--backgroundColor{
+//     background: $success-color;
+//   }
+//   #{$name}warning--backgroundColor{
+//     background: $warning-color;
+//   }
+//   #{$name}errer--backgroundColor{
+//     background: $errer-color;
+//   }
+
+//  /*text-color*/
+// #{$name}default--textColor{
+//     color: $default-color;
+//   }
+//   #{$name}success--textColor{
+//     color: $success-color;
+//   }
+//   #{$name}warning--textColor{
+//     color: $warning-color;
+//   }
+//   #{$name}errer--textColor{
+//     color: $errer-color;
+//   }
+/*文字超出省略*/
+.vvm-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.vvm-scrollbar {
+  &::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
+  }
+}
+
+/*1px 边框*/
+[class*='vvm-hairline'] {
+  &::after {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    border: 0 solid $B4;
+    transform: scale(0.5);
+  }
+}
+.vvm-hairline {
+  &-top,
+  &-left,
+  &-right,
+  &-bottom,
+  &-surround,
+  &-top-bottom {
+    position: relative;
+  }
+
+  &-top::after {
+    border-top-width: 1px;
+  }
+
+  &-left::after {
+    border-left-width: 1px;
+  }
+
+  &-right::after {
+    border-right-width: 1px;
+  }
+
+  &-bottom::after {
+    border-bottom-width: 1px;
+  }
+
+  &-unset {
+    &-top-bottom::after {
+      border-width: 1px 0;
+    }
+  }
+
+  &-surround::after {
+    border-width: 1px;
+  }
+}

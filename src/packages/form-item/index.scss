@@ -1,0 +1,22 @@
+#{$name}formitem{
+    background: #fff;
+    padding: 20px 0;
+    &--inline{
+        display: flex;
+    }
+    &--label{
+        width: 160px;
+        display: flex;
+        align-items: center;
+        color: $B1;
+        padding-left: 14px;
+        padding-right: 8px;
+        box-sizing: border-box;
+    }
+    &--body{
+        flex-grow: 1;
+        position: relative;
+        box-sizing: border-box;
+        padding: 0 40px 0 0;
+    }
+}

@@ -1,0 +1,25 @@
+#{$name}actionsheet{
+    &--content{
+        width: 100%;
+    }
+    &--ladel{
+        padding: 26px 0;
+        text-align: center;
+        position: relative;
+        &.--select--active{
+            color: $default-color;
+        }
+        &--disabled{
+            color: $disabled-color;
+        }
+    }
+    &--cancel{
+        text-align: center;
+        padding: 26px 0;
+        color: $B3;
+        font-size: 16px;
+    }
+    &--buttom{
+        border-top: 8px solid $B5;
+    }
+}

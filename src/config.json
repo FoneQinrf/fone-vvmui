@@ -1,0 +1,81 @@
+{
+  "navList": [
+    {
+      "name": "指南",
+      "packages": [
+        {
+          "name": "介绍",
+          "path": "intro"
+        },
+        {
+          "name": "icon - 图标",
+          "path": "icon"
+        }
+      ]
+    },
+    {
+      "name": "布局组件",
+      "packages": [
+        {
+          "name": "Card - 卡片",
+          "path": "card"
+        },
+        {
+          "name": "Cell - 单元格",
+          "path": "cell"
+        }
+      ]
+    },
+    {
+      "name": "基础组件",
+      "packages": [
+        {
+          "name": "Button - 按钮",
+          "path": "button"
+        },
+        {
+          "name": "Popup - 弹出层",
+          "path": "popup"
+        },
+        {
+          "name": "ScrollCard - 滑动视图条",
+          "path": "scroll-card"
+        }
+      ]
+    },
+    {
+      "name": "表单组件",
+      "packages": [
+        {
+          "name": "Input - 输入框",
+          "path": "input"
+        },
+        {
+          "name": "ActionSheet - 动作面板",
+          "path": "action-sheet"
+        },
+        {
+          "name": "Radio - 单选",
+          "path": "radio"
+        },
+        {
+          "name": "Checkbox - 多选",
+          "path": "checkbox"
+        }
+      ]
+    },
+    {
+      "name": "操作反馈",
+      "packages": [
+        {
+          "name": "Toast - 吐司",
+          "path": "toast"
+        },
+        {
+          "name": "Dialog - 弹出框",
+          "path": "dialog"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+#{$name}radio {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 2px 6px;
+  user-select: none;
+  align-items: center;
+  &--icon {
+    display: flex;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #e0e0eb;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &.vvm-ignore {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  &.--default {
+    .--radio-icon {
+      color: $default-color;
+    }
+    &.--text-theme {
+      color: $default-color;
+    }
+  }
+  &.--success {
+    .--radio-icon {
+      color: $success-color;
+    }
+    &.--text-theme {
+      color: $success-color;
+    }
+  }
+  &.--warning {
+    .--radio-icon {
+      color: $warning-color;
+    }
+    &.--text-theme {
+      color: $warning-color;
+    }
+  }
+  &.--error {
+    .--radio-icon {
+      color: $error-color;
+    }
+    &.--text-theme {
+      color: $error-color;
+    }
+  }
+
+  &.--disabled {
+    .--radio-icon,
+    .vvm-radio--label {
+      color: $disabled-color;
+    }
+  }
+
+  &--label {
+    padding-left: 6px;
+    display: flex;
+    align-items: center;
+  }
+}

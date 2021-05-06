@@ -1,0 +1,65 @@
+#{$name}checkbox {
+  display: flex;
+  position: relative;
+  align-items: center;
+  padding: 2px 6px;
+  user-select: none;
+  align-items: center;
+  &--icon {
+    display: flex;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #e0e0eb;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    &.vvm-ignore {
+      width: 18px;
+      height: 18px;
+    }
+  }
+  &--label {
+    padding-left: 6px;
+    display: flex;
+    align-items: center;
+  }
+  &.--default {
+    .--checkbox-icon {
+      color: $default-color;
+    }
+    &.--text-theme {
+      color: $default-color;
+    }
+  }
+  &.--success {
+    .--checkbox-icon {
+      color: $success-color;
+    }
+    &.--text-theme {
+      color: $success-color;
+    }
+  }
+  &.--warning {
+    .--checkbox-icon {
+      color: $warning-color;
+    }
+    &.--text-theme {
+      color: $warning-color;
+    }
+  }
+  &.--error {
+    .--checkbox-icon {
+      color: $error-color;
+    }
+    &.--text-theme {
+      color: $error-color;
+    }
+  }
+
+  &.--disabled {
+    .--checkbox-icon,
+    .vvm-checkbox--label {
+      color: $disabled-color;
+    }
+  }
+}

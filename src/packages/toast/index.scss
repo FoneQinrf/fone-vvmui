@@ -1,0 +1,39 @@
+#{$name}toast{
+    &--body{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        transition: all 0.5s;
+        background: $B1;
+        z-index: $toast;
+        max-width: 80%;
+        border-radius: 6px;
+        color: #fff;
+        text-align: center;
+        min-width: 60px;
+        &.--info{
+            padding: 14px 28px;
+        }
+        &.--success,&.--error,&.--warning,&.--loading{
+            border-radius: 6px;
+            padding: 10px 40px;
+            #{$name}toast--icon{
+                padding: 4px 0;
+                text-align: center;
+            }
+        }
+        &.--loading{
+            padding: 14px 24px;
+        }
+    }
+    &--loading{
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        opacity: 0;
+        z-index: $toast - 1;
+    }
+}

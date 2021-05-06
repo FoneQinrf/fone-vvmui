@@ -1,0 +1,46 @@
+#{$name}input{
+    display: flex;
+    align-items: center;
+    position: relative;
+    &--text{
+        border: none;
+        width: 100%;
+        flex-flow: 1;
+        &::placeholder{
+            color: $placeholder-color;
+        }
+        &:disabled{
+            background: #fff;
+            color: $disabled-color;
+        }
+    }
+    &--icon{
+        padding: 0 12px;
+        display: flex;
+        align-items: center;
+    }
+    &--unity{
+        padding-left: 12px;
+        color: $B2;
+    }
+    &--disabled{
+        #{$name}input--text{
+            user-select: none;
+        }
+    }
+    &--right{
+        #{$name}input--text{
+            text-align: right;
+        }
+    }
+    &--left{
+        #{$name}input--text{
+            text-align: left;
+        }
+    }
+    &--center{
+        #{$name}input--text{
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+#{$name}checkboxgroup {
+  display: block;
+  &.--inline {
+    display: flex;
+  }
+}

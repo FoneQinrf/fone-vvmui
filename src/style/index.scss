@@ -1,0 +1,29 @@
+
+html,body{
+    padding: 0;
+    margin: 0;
+    font-family: PingFang SC, 'Helvetica Neue', Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    font-size: $size-14;
+}
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
+p,h1,h2,h3,h4,h5,ul,ol{
+    padding: 0;
+    margin: 0;
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+button, input, select, textarea {
+    outline: none;
+    font: inherit;
+}
+a{
+    text-decoration:none;
+}
