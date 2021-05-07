@@ -1,14 +1,28 @@
 {
-  "name": "@fone/vvmui",
+  "name": "vvmui",
   "npm": {
     "tag": "beta"
   },
-  "version": "3.0.0-beta.1",
+  "version": "3.0.0-beta.2",
   "author": "Fone`峰",
   "main": "lib/vvmui.umd.js",
   "module": "lib/vvmui.es.js",
   "style": "lib/style.css",
   "typings": "lib/index.d.ts",
+  "description": "Vue3组件库",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FoneQinrf/fone-vvmui.git"
+  },
+  "files": [
+    "lib",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
     "dev:vite": "vite --open --force",
     "build": "vite build",
@@ -76,5 +90,14 @@
   },
   "lint-staged": {
     "*.{ts,js,vue,scss,tsx,css}": "prettier --write"
-  }
+  },
+  "keywords": [
+    "vvmui",
+    "vue",
+    "vue3",
+    "webpack",
+    "vue component",
+    "vue3 component",
+    "vite"
+  ]
 }
