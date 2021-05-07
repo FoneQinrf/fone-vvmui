@@ -3,7 +3,7 @@ node_modules
 dist
 dist-ssr
 *.local
-yarn.lock
 lib
 coverage
 *.log
+package-lock.json

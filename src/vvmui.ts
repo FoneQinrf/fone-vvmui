@@ -2,11 +2,12 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 12:17:01
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-07 09:56:58
+ * @LastEditTime: 2021-05-07 10:50:07
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  */
+
 import { version } from '../package.json';
 import { App } from 'vue';
 import Button from './packages/button/index.vue';
