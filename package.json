@@ -1,5 +1,8 @@
 {
   "name": "@fone/vvmui",
+  "npm": {
+    "tag": "beta"
+  },
   "version": "3.0.0-beta.1",
   "author": "Fone`峰",
   "main": "lib/vvmui.umd.js",
