@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-05 20:28:15
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-06 15:00:03
+ * @LastEditTime: 2021-05-07 13:43:57
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -24,7 +24,7 @@ export default defineComponent({
   setup() {
     const router = useRoute();
     const path = ref("");
-    const demo = import.meta.env.DEV ? "http://localhost:3000/mobile.html" : "";
+    const demo = import.meta.env.DEV ? "http://localhost:3000/fone-vvmui/mobile.html" : "/fone-vvmui/";
 
     const filters = (name: string) => {
       if (filter.includes(name)) {

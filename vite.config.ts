@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 11:27:52
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-06 15:26:56
+ * @LastEditTime: 2021-05-07 13:40:57
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -15,6 +15,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/fone-vvmui/',
   resolve: {
     alias: [{ find: '@', replacement: resolve(__dirname, './src') }],
     extensions: [
