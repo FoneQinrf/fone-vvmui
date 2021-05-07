@@ -39,10 +39,6 @@ jobs:
           path: node_modules
           key: ${{runner.OS}}-${{hashFiles('**/yarn.lock')}}
 
-      - name: publish
-        run: |
-          npm publish --access=public
-
       - name: 推送 ${{ secrets.GIT_TOKEN }}
         run: |
           cd ./dist
