@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 12:17:01
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-06 13:35:55
+ * @LastEditTime: 2021-05-07 09:56:58
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -26,12 +26,12 @@ import Dialog from './packages/dialog';
 import ScrollCard from './packages/scroll-card/index.vue';
 import Checkbox from './packages/checkbox/index.vue';
 import CheckboxGroup from './packages/checkbox-group/index.vue';
-import Copy from './packages/copy';
+import Copy from '@/packages/copy';
 
 // console.log(Dialog);
 // Dialog.info();
 
-import { setConfig } from './packages/config';
+import { setConfig } from '@/packages/config';
 
 function install(app: App, options: any) {
   app.config.globalProperties.$VVMUI = options;
@@ -86,7 +86,7 @@ export {
   CheckboxGroup,
   Copy
 };
-export * from './packages/utils';
+export * from '@/packages/utils';
 export default { install, version: `vvmui-3x-${version}` };
 
 import '@/style.scss';
