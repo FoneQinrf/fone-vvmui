@@ -1,15 +1,14 @@
 # This is a basic workflow to help you get started with Actions
 
-
 name: CI
 
 # Controls when the action will run.
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
   push:
-    branches: [ master ]
+    branches: [master]
   pull_request:
-    branches: [ master ]
+    branches: [master]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -39,8 +38,15 @@ jobs:
           yarn
           yarn build:prod
 
+      - name: 緩存
+        uses: actions/cache@v1
+        id: cache-dependencies
+        with:
+          path: node_modules
+          key: ${{runner.OS}}-${{hashFiles('**/yarn.lock')}}
+
       # Runs a set of commands using the runners shell
-      - name: 推送
+      - name: 推送 https://${{ secrets.GIT_TOKEN }}@${secrets.GIT_REF} master:gh-pages
         run: |
           cd ./dist
           git init

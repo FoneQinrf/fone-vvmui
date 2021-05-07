@@ -13,17 +13,16 @@ script:
   - yarn test
   - yarn build:prod
 
-after_success:
-  # if: branch = master
-  - cd ./dist
-  - git init
-  - git config --global user.name "${USER_NAME}"
-  - git config --global user.email "${USER_EMAIL}"
-  - git add .
-  - git commit -m "vvmui"
-  - git push --quiet --force "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
+# after_success:
+#   # if: branch = master
+#   - cd ./dist
+#   - git init
+#   - git config --global user.name "${USER_NAME}"
+#   - git config --global user.email "${USER_EMAIL}"
+#   - git add .
+#   - git commit -m "vvmui"
+#   - git push --quiet --force "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
 
 branches:
   only:
-    - master
-    - develop
+    - /*
