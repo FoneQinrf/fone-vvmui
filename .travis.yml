@@ -18,6 +18,7 @@ branches:
     - master
     - develop
 
+if: branch = master
 after_success:
   - cd ./dist
   - git init
