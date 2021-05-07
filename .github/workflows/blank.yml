@@ -1,0 +1,43 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x]
+
+    steps:
+      - name: 开始
+        uses: actions/checkout@v1
+
+      - name: 設置 Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: 安裝插件
+        run: |
+          yarn
+          yarn build:prod
+
+      - name: 部署博客
+        run: |
+          cd ./dist
+          git init
+          git config user.name "${{secrets.GIT_NAME}}"
+          git config user.email "${{secrets.GIT_EMAIL}}"
+          git add .
+          git commit -m "vvmui"
+          git push --quiet --force "https://${secrets.GIT_TOKEN}@${secrets.GIT_REF}" master:gh-pages
