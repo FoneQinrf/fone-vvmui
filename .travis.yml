@@ -13,13 +13,6 @@ script:
   - yarn test
   - yarn build:prod
 
-branches:
-  only:
-    - master
-    - develop
-
-if: branch = master
-
 after_success:
   - cd ./dist
   - git init
@@ -28,3 +21,8 @@ after_success:
   - git add .
   - git commit -m "vvmui"
   - git push --quiet --force "https://${GH_TOKEN}@${GH_REF}" master:${P_BRANCH}
+
+branches:
+  only:
+    - master
+    - develop
