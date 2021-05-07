@@ -14,7 +14,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "build:vvmui": "vite build --config vite.config.vvmui.ts",
-    "build:prod": "npm run build && npm run build:vvmui && node config/config.mkdir.types.js && node config/config.copy.themes.js",
+    "build:prod": "npm run build:vvmui && node config/config.mkdir.types.js && node config/config.copy.themes.js && npm run build",
     "dev:ui": "vite --config vite.config.vvmui.ts",
     "dev": "concurrently \"npm run dev:vite\" \"npm run watch:css\"",
     "watch:css": "gulp --gulpfile gulpfile.js",
