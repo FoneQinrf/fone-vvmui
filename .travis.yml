@@ -14,6 +14,7 @@ script:
   - yarn build:prod
 
 after_success:
+  if: branch = master
   - cd ./dist
   - git init
   - git config --global user.name "${USER_NAME}"

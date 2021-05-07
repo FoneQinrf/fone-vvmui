@@ -16,28 +16,20 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [10.x]
+        node-version: [15.x]
 
     steps:
       - name: 开始
-        uses: actions/checkout@v1
-
-      - name: 設置 Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v1
-        with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: 安裝插件
-        run: |
-          yarn
-          yarn build:prod
-
-      - name: 部署博客
-        run: |
-          cd ./dist
-          git init
-          git config user.name "${{secrets.GIT_NAME}}"
-          git config user.email "${{secrets.GIT_EMAIL}}"
-          git add .
-          git commit -m "vvmui"
-          git push --quiet --force "https://${secrets.GIT_TOKEN}@${secrets.GIT_REF}" master:gh-pages
+        - uses: actions/checkout@v2
+        - uses: actions/setup-node@v1
+          with:
+            node-version: 15
+        - run: yarn
+        - run: yarn test
+        - run: cd ./dist
+        - run: git init
+        - run: git config user.name "${{secrets.GIT_NAME}}"
+        - run: git config user.email "${{secrets.GIT_EMAIL}}"
+        - run: git add .
+        - run: git commit -m "vvmui"
+        - run: git push --quiet --force "https://${secrets.GIT_TOKEN}@${secrets.GIT_REF}" master:gh-pages
