@@ -9,7 +9,7 @@
   "module": "lib/vvmui.es.js",
   "style": "lib/style.css",
   "typings": "lib/index.d.ts",
-  "description": "Vue3组件库",
+  "description": "Vue3.0组件库",
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
