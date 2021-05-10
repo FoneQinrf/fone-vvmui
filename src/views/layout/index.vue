@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-04 22:48:46
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-06 16:13:48
+ * @LastEditTime: 2021-05-10 13:28:07
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -11,11 +11,13 @@
   <div :style="style" class="vvm-layout">
     <Nav />
     <div class="doc-main vvm-scrollbar">
-      <router-view v-slot="{ Component }">
-        <keep-alive>
-          <component :is="Component" />
-        </keep-alive>
-      </router-view>
+      <transition name="vvm-fade">
+        <router-view v-slot="{ Component }">
+          <keep-alive>
+            <component :is="Component" />
+          </keep-alive>
+        </router-view>
+      </transition>
       <Demo />
     </div>
   </div>
@@ -60,6 +62,7 @@ export default defineComponent({
 <style lang="scss">
 .doc-main {
   color: #666;
+  background: $B6;
   ul {
     padding-left: 20px;
   }
@@ -92,7 +95,7 @@ export default defineComponent({
   table {
     width: 100%;
     border-collapse: collapse;
-    border: 1px solid #f2f2f4;
+    // border: 1px solid #f2f2f4;
   }
 
   table td,
@@ -108,6 +111,9 @@ export default defineComponent({
 
   table thead th {
     text-align: left;
+  }
+  a {
+    color: $default-color;
   }
 }
 </style>

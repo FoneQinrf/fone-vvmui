@@ -2,14 +2,17 @@
  * @Author: Fone`峰
  * @Date: 2021-04-26 16:07:57
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-06 18:09:39
+ * @LastEditTime: 2021-05-10 11:18:09
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
 -->
-## Checkbox 多选
+# Checkbox 多选
 ---
-### 使用方式
+
+<Card>
+
+### 引入
 <Code :content="`
 import { createApp } from 'vue';
 import { Checkbox } from 'vvmui';
@@ -19,10 +22,20 @@ app.use(Checkbox);
 app.use(CheckboxGroup);
 `"/>
 
+</Card>
+
+## 代码演示
+<Card>
+
 ### 基本用法
 <Code language="html" :content="`
 <Checkbox>选项</Checkbox>
 `"/>
+
+</Card>
+<br>
+<Card>
+
 ### 搭配CheckboxGroup使用
 <Code language="html" :content='`
 <CheckboxGroup>
@@ -31,6 +44,10 @@ app.use(CheckboxGroup);
   <Checkbox label="选项三" />
 </CheckboxGroup>
 `'/>
+
+</Card>
+<br>
+<Card>
 
 ### type类型
 `type`类型提供`default`、`errer`、`success`、`warning`四种可选，默认`default`
@@ -42,6 +59,10 @@ app.use(CheckboxGroup);
   <Checkbox type="error" label="选项四" />
 </CheckboxGroup>
 `'/>
+
+</Card>
+<br>
+<Card>
 
 ### 禁用
 可通过`disabled`属性禁用`Checkbox`组件
@@ -65,6 +86,10 @@ export default {
 };
 '/>
 
+</Card>
+<br>
+<Card>
+
 ### 选中字体跟随主题色
 设置`text-theme`属性时可让`Checkbox`选中时`label`字体跟随主题色变化
 <Code language="html" content='
@@ -75,6 +100,10 @@ export default {
   <Checkbox type="error" label="选项四" />
 </CheckboxGroup>
 '/>
+
+</Card>
+<br>
+<Card>
 
 ### 布局方式
 设置`inline`可调整`Checkbox`的布局方式
@@ -87,6 +116,10 @@ export default {
 </CheckboxGroup>
 '/>
 
+</Card>
+<br>
+<Card>
+
 ### 配合icon使用
 <Code language="html" content='
 <Checkbox>
@@ -95,8 +128,13 @@ export default {
 </Checkbox>
 '/>
 
-### API
-##### Checkbox props
+</Card>
+
+## API
+
+<Card>
+
+### Checkbox props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
 | v-model  | 绑定值       | Boolean       | 无 | 无
@@ -106,7 +144,11 @@ export default {
 | icon  | 自定义`Checkbox`选中的`icon`    | String       | 无 | iconroundcheckfill |
 | text-theme  | 选中时`label`字体是否跟随主题色变化    | Boolean       | 无 | false |
 
-##### CheckboxGroup props
+</Card>
+<br>
+<Card>
+
+### CheckboxGroup props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
 | v-model  | 绑定值       | Array       | 无 | 无
@@ -115,21 +157,39 @@ export default {
 | inline  | 调整`Checkbox`的布局方式    | Boolean       | 无 | true |
 | text-theme  | 同`Checkbox`的`text-theme`，设置所有子`Checkbox`    | Boolean       | 无 | false |
 
-##### Checkbox solt
+</Card>
+<br>
+<Card>
+
+### Checkbox solt
 | 名称 | 说明 |
 |------|------------|
 | 无  | 自定义主体内容 |
 
-##### Checkbox Events
+</Card>
+<br>
+<Card>
+
+### Checkbox Events
 | 事件名 | 说明 | 回调参数 |
 |------|------------|------------|
 | change | `Checkbox`变化时触发，嵌套`CheckboxGroup`组件使用时无效 |  选中的`label`值  |
 
-##### CheckboxGroup Events
+</Card>
+<br>
+<Card>
+
+### CheckboxGroup Events
 | 事件名 | 说明 | 回调参数 |
 |------|------------|------------|
 | change | 绑定值变化时触发 |  选中的`label`值数组  |
 
-##### 更新日志
+</Card>
+<br>
+<Card>
+
+### 更新日志
 | 版本 |类型|内容|
 |-------------|-|-|
+
+</Card>

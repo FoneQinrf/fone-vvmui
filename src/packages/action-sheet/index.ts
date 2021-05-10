@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-15 16:02:29
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-04-26 15:29:46
+ * @LastEditTime: 2021-05-10 14:43:22
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -29,13 +29,14 @@ const install = (opts: any = {}) => {
   render(instance, container);
   App = instance.component.ctx;
   App.show(container);
+  return App;
 };
 
 ActionSheet.show = (opts: any) => {
-  install(opts);
+  return install(opts);
 };
 
-ActionSheet.close = () => {
+ActionSheet.cancel = () => {
   if (App) {
     App.cancel();
   }

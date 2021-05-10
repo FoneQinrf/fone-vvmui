@@ -1,7 +1,7 @@
 #{$name}fade-enter-active,
 #{$name}fade-leave-active
  {
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease-out;
 }
 #{$name}fade-enter-from,
 #{$name}fade-leave-to

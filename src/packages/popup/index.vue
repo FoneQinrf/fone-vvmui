@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-14 14:15:39
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-07 09:59:48
+ * @LastEditTime: 2021-05-09 17:07:58
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -117,7 +117,7 @@ export default defineComponent({
       type: Boolean,
       default: true
     },
-    //期望出现的当时
+    //期望出现的方式
     position: {
       type: String as PropType<PopupType>,
       default: 'center'
