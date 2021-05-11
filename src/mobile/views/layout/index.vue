@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-07 14:42:03
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 13:29:39
+ * @LastEditTime: 2021-05-11 11:21:57
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -11,13 +11,13 @@
   <div class="demo-wrp">
     <div v-if="frame" class="nav">{{ name }}</div>
     <div :class="frame ? 'router-view frame' : 'router-view'">
-      <transition name="vvm-fade">
-        <router-view v-slot="{ Component }">
+      <router-view v-slot="{ Component }">
+        <transition name="vvm-fade">
           <keep-alive>
             <component :is="Component" />
           </keep-alive>
-        </router-view>
-      </transition>
+        </transition>
+      </router-view>
     </div>
   </div>
 </template>

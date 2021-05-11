@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-14 14:15:56
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 11:07:07
+ * @LastEditTime: 2021-05-11 14:28:36
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -13,12 +13,13 @@
 <Card>
 
 ### 引入
-<Code :content="`
+```js
 import { createApp } from 'vue';
-import { Popup } from 'vvmui';\n
+import { Popup } from 'vvmui';
+
 const app = createApp();
 app.use(Popup);
-`"/>
+```
 
 </Card>
 
@@ -27,17 +28,18 @@ app.use(Popup);
 <Card>
 
 ### 基本使用
-<Code language="html" content="
+```html
 <Popup position='center' v-model:show='value'>
     <div></div>
-</Popup>"/>
+</Popup>
+```
 
 </Card>
 <br>
 <Card>
 
 ### 期望弹出的方式
-<Code language="html" content="
+```html
 <Popup position='top' v-model:show='value'>
     <div></div>
 </Popup>
@@ -50,7 +52,7 @@ app.use(Popup);
 <Popup position='left' v-model:show='value'>
     <div></div>
 </Popup>
-"/>
+```
 
 </Card>
 

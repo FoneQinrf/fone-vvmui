@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-25 14:46:04
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 11:09:27
+ * @LastEditTime: 2021-05-11 14:31:03
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -13,12 +13,13 @@
 <Card>
 
 ### 引入
-<Code :content="`
+```js
 import { createApp } from 'vue';
-import { ScrollCard } from 'vvmui';\n
+import { ScrollCard } from 'vvmui';
+
 const app = createApp();
 app.use(ScrollCard);
-`"/>
+```
 
 </Card>
 
@@ -27,10 +28,11 @@ app.use(ScrollCard);
 <Card>
 
 ### 基本使用
-<Code language="html" content='
+```html
 <ScrollCard>
-    <h4 v-for="item in 200">尝试滑动查看效果</h4>
-</ScrollCard>'/>
+    <h4 v-for='item in 200'>尝试滑动查看效果</h4>
+</ScrollCard>
+```
 
 </Card>
 

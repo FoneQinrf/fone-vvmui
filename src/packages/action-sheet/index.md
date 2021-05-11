@@ -2,16 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-13 11:51:58
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 15:15:00
- * @Description: file content
- * @Email: qinrifeng@163.com
- * @Github: https://github.com/FoneQinrf
--->
-<!--
- * @Author: Fone`峰
- * @Date: 2021-04-12 15:09:03
- * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 13:59:46
+ * @LastEditTime: 2021-05-11 14:47:21
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -22,12 +13,13 @@
 <Card> 
 
 ### 引入
-<Code :content="`
+```js
 import { ActionSheet } from 'vue';
-import { Input } from 'vvmui';\n
+import { Input } from 'vvmui';
+
 const app = createApp();
 app.use(ActionSheet);
-`"/>
+```
 
 </Card>
 
@@ -35,58 +27,63 @@ app.use(ActionSheet);
 <Card> 
 
 ### 使用方式
-<Code language="html" :content='`
-<ActionSheet :data="data" />
-`'/>
+```html
+<template>
+  <ActionSheet :data='data' />
+</template>
 
-<Code :content='`
-import { ref } from "vue";
+<script>
+import { ref } from 'vue';
+
 export default {
   setup() {
     const data = ref([
       {
-        label: "选择一",
+        label: '选择一',
         value: 0,
       },
       {
-        label: "选择二",
+        label: '选择二',
         value: 1,
       },
       {
-        label: "选择三",
+        label: '选择三',
         value: 2,
       },
     ]);
     return { data };
   },
 };
-`'/>
+</script>
+```
 
 </Card> 
 <br>
 <Card>
 
 ### 禁用
-<Code language="html" :content='`
-<ActionSheet disabled :data="data" />
-<ActionSheet v-model="value" disabled :data="data" />
-`'/>
+```html
+<template>
+  <ActionSheet disabled :data='data' />
+  <ActionSheet v-model='value' disabled :data='data' />
+</template>
 
-<Code :content='`
-import { ref } from "vue";
+<script>
+import { ref } from 'vue';
+
 export default {
   setup() {
     const data = ref([
       {
-        label: "选择一",
+        label: '选择一',
         value: 0,
       },
       {
-        label: "选择二",
+        label: '选择二',
         value: 1,
       },
       {
-        label: "选择三",
+        label: '选择三',
         value: 2,
       },
     ]);
@@ -94,142 +91,152 @@ export default {
     return { data, value };
   },
 };
-`'/>
-
+</script>
+```
 </Card>
 <br>
 <Card>
 
 ### 展示取消按钮
-<Code language="html" :content='`
-<ActionSheet is-cancel :data="data" />
-`'/>
+```html
+<template>
+  <ActionSheet is-cancel :data='data' />
+</template>
 
-<Code :content='`
-import { ref } from "vue";
+<script>
+import { ref } from 'vue';
+
 export default {
   setup() {
     const data = ref([
       {
-        label: "选择一",
+        label: '选择一',
         value: 0,
       },
       {
-        label: "选择二",
+        label: '选择二',
         value: 1,
       },
       {
-        label: "选择三",
+        label: '选择三',
         value: 2,
       },
     ]);
     return { data };
   },
 };
-`'/>
+</script>
+```
 
 </Card>
 <br>
 <Card>
 
 ### 禁用选项
-<Code language="html" :content='`
-<ActionSheet is-cancel :data="data" />
-`'/>
+```html
+<template>
+  <ActionSheet is-cancel :data='data' />
+</template>
 
-<Code :content='`
-import { ref } from "vue";
+<script>
+import { ref } from 'vue';
+
 export default {
   setup() {
     const data = ref([
       {
-        label: "选择一",
+        label: '选择一',
         value: 0,
       },
       {
-        label: "选择二",
+        label: '选择二',
         value: 1,
         disabled: true,
       },
       {
-        label: "选择三",
+        label: '选择三',
         value: 2,
       },
     ]);
     return { data };
   },
 };
-`'/>
-
+</script>
+```
 </Card>
 <br>
 <Card>
 
 ### API形式调用
-<Code :content='`
-import { ref } from "vue";
-import { ActionSheet } from "vvmui";
+```html
+<template>
+  <ActionSheet is-cancel :data='data' />
+</template>
+
+<script>
+import { ref } from 'vue';
+import { ActionSheet } from 'vvmui';
+
 export default {
   setup() {
     const data = ref([
       {
-        label: "选择一",
+        label: '选择一',
         value: 0,
       },
       {
-        label: "选择二",
+        label: '选择二',
         value: 1,
       },
       {
-        label: "选择三",
+        label: '选择三',
         value: 2,
       },
     ]);
     ActionSheet.show({
       data: data.value,
-      onConfirm: (val: any, opts: any) => {
-        console.log(opts.label);
+      onConfirm: (val, opts) => {
+        console.log(val,opts.label);
       },
     });
   },
 };
-`'/>
-
+</script>
+```
 </Card>
 <br>
 <Card>
 
 ### 手动调用关闭
-<Code :content='`
-import { ref } from "vue";
-import { ActionSheet } from "vvmui";
+```js
+import { ref } from 'vue';
+import { ActionSheet } from 'vvmui';
 export default {
   setup() {
     const data = ref([
       {
-        label: "选择一",
+        label: '选择一',
         value: 0,
       },
       {
-        label: "选择二",
+        label: '选择二',
         value: 1,
       },
       {
-        label: "选择三",
+        label: '选择三',
         value: 2,
       },
     ]);
     const ctx = ActionSheet.show({
       data: data.value,
-      onConfirm: (val: any, opts: any) => {
-        console.log(opts.label);
+      onConfirm: (val, opts) => {
+        console.log(val,opts.label);
       }
     });
     // ctx.cancel() or ActionSheet.cancel()
   },
 };
-`'/>
-
+```
 </Card>
 
 ## API

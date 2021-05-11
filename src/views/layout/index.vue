@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-04 22:48:46
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 13:28:07
+ * @LastEditTime: 2021-05-11 14:29:46
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -10,23 +10,24 @@
 <template>
   <div :style="style" class="vvm-layout">
     <Nav />
-    <div class="doc-main vvm-scrollbar">
-      <transition name="vvm-fade">
-        <router-view v-slot="{ Component }">
+    <div v-copy-code class="doc-main vvm-scrollbar">
+      <router-view v-slot="{ Component }">
+        <transition name="vvm-fade">
           <keep-alive>
             <component :is="Component" />
           </keep-alive>
-        </router-view>
-      </transition>
+        </transition>
+      </router-view>
       <Demo />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, nextTick } from 'vue';
 import Nav from './components/docNav.vue';
 import Demo from './components/demo.vue';
+import { Toast } from '@/vvmui';
 
 export default defineComponent({
   name: 'layout',
@@ -40,6 +41,47 @@ export default defineComponent({
     return {
       style
     };
+  },
+  directives: {
+    'copy-code': {
+      mounted(el) {
+        nextTick(() => {
+          el.handler = (e: any) => {
+            if (e.target.className === 'copy') {
+              console.log(e.target.getAttribute('value'));
+              const value = e.target.getAttribute('value');
+              if (!value) {
+                console.log('无复制内容');
+                return;
+              }
+              const textarea: any = document.createElement('textarea');
+              // 将该 textarea 设为 readonly 防止 iOS 下自动唤起键盘，同时将 textarea 移出可视区域
+              textarea.readOnly = 'readonly';
+              textarea.style.position = 'absolute';
+              textarea.style.left = '-9999px';
+              textarea.value = value;
+              document.body.appendChild(textarea);
+              textarea.select();
+              const result = document.execCommand('Copy');
+              if (result) {
+                if (el.$callback && typeof el.$callback === 'function') {
+                  el.$callback();
+                  return;
+                }
+                // toast();
+                Toast.info('复制成功');
+                // window.alert('复制成功');
+              }
+              document.body.removeChild(textarea);
+            }
+          };
+          el.addEventListener('click', el.handler);
+        });
+      },
+      unmounted(el: any) {
+        el.removeEventListener('click', el.handler);
+      }
+    }
   }
 });
 </script>
@@ -114,6 +156,20 @@ export default defineComponent({
   }
   a {
     color: $default-color;
+  }
+  .hljs {
+    position: relative;
+    border-radius: 6px;
+    padding: 10px;
+    background: #fdf6e3;
+    .copy {
+      position: absolute;
+      top: 3px;
+      right: 5px;
+      font-size: 12px;
+      cursor: pointer;
+      color: #3778e1;
+    }
   }
 }
 </style>

@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-08 15:59:25
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 10:56:58
+ * @LastEditTime: 2021-05-11 14:20:56
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -13,14 +13,15 @@
 <Card> 
 
 ### 引入
-<Code :content="`
+``` js
 import { createApp } from 'vue';
 import { Cell } from 'vvmui';
-import { CellGroup } from 'vvmui';\n
+import { CellGroup } from 'vvmui';
+
 const app = createApp();
 app.use(Cell);
 app.use(CellGroup);
-`"/>
+```
 
 </Card> 
 
@@ -29,12 +30,12 @@ app.use(CellGroup);
 <Card> 
 
 ### 基本用法
-<Code language="html" :content='`
+``` html
 <CellGroup>
-  <Cell title="标题" value="副标题"></Cell>
-  <Cell title="标题" value="副标题" content="详细内容"></Cell>
+  <Cell title='标题' value='副标题'></Cell>
+  <Cell title='标题' value='副标题' content='详细内容'></Cell>
 </CellGroup>
-`'/>
+```
 
 </Card>
 <br>
@@ -42,12 +43,12 @@ app.use(CellGroup);
 
 ### 右边展示箭头
 通过`arrow-icon`属性也可自定义展示的图标
-<Code language="html" :content='`
+``` html
 <CellGroup>
-  <Cell arrow title="标题1"></Cell>
-  <Cell arrow title="标题2" arrow-icon="iconashbin"></Cell>
+  <Cell arrow title='标题1'></Cell>
+  <Cell arrow title='标题2' arrow-icon='iconashbin'></Cell>
 </CellGroup>
-`'/>
+```
 
 </Card>
 <br>
@@ -55,27 +56,27 @@ app.use(CellGroup);
 
 ### 导航模式
 通过传入`to`或`url`可开启导航模式
-<Code language="html" :content='`
+```html
 <CellGroup>
-  <Cell to="/" title="标题1"></Cell>
-  <Cell url="https://www.baidu.com/" title="标题2"></Cell>
+  <Cell to='/' title='标题1'></Cell>
+  <Cell url='https://www.baidu.com/' title='标题2'></Cell>
 </CellGroup>
-`'/>
+```
 
 </Card>
 <br>
 <Card> 
 
 ### slot分发
-<Code language="html" :content='`
+```html
 <CellGroup>
   <Cell arrow>
     <template v-slot:title>
-      <Icon name="iconuser" />
+      <Icon name='iconuser' />
       <span>标题</span>
     </template>
   </Cell>
-  <Cell title="标题" value="副标题">
+  <Cell title='标题' value='副标题'>
       <template v-slot:default>
         <p>实用</p>
         <p>美观</p>
@@ -83,7 +84,7 @@ app.use(CellGroup);
       </template>
   </Cell>
 </CellGroup>
-`'/>
+```
 
 </Card>
 

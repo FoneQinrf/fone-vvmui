@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-09 11:20:47
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 13:36:44
+ * @LastEditTime: 2021-05-11 14:57:05
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -13,11 +13,11 @@
 <Card> 
 
 ### 引入
-<Code :content="`
-import { Toast } from 'vvmui';\n
-Toast.info('info');
-`"/>
+```js
+import { Toast } from 'vvmui';
 
+Toast.info('info');
+```
 </Card>
 
 ## 代码演示
@@ -26,39 +26,36 @@ Toast.info('info');
 
 ### 提示类型
 内置`info` `success` `error` `warning` `loading` `close`五个API提示供使用
-<Code content="
+```js
 Toast.info('info');
 Toast.success('success');
 Toast.error('error');
 Toast.warning('warning');
 Toast.loading('loading');
-"/>
-
+```
 </Card>
 <br>
 <Card> 
 
 ### 自定义图标
-<Code content="
+```js
 Toast.success({
   msg: 'success',
   icon: 'iconroundcheckfill'
 });
-"/>
-
+```
 </Card>
 <br>
 <Card> 
 
 ### 关闭回调
-<Code content="
+```js
 Toast.info('消息', {
   onClose: () => {
     console.log('关闭');
   }
 });
-"/>
-
+```
 </Card>
 
 ## API

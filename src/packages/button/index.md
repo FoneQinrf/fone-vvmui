@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 15:21:42
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 11:03:05
+ * @LastEditTime: 2021-05-11 14:26:47
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -13,12 +13,13 @@
 <Card> 
 
 ### 引入
-<Code :content="`
+```js
 import { createApp } from 'vue';
-import { Button } from 'vvmui';\n
+import { Button } from 'vvmui';
+
 const app = createApp();
 app.use(Button);
-`"/>
+```
 
 </Card> 
 
@@ -27,12 +28,12 @@ app.use(Button);
 
 ### 按钮类型
 支持`default`、`success`、`warning`、`error`四种类型，默认`default`
-<Code language="html" :content='`
+```html
 <Button>默认按钮</Button>
-<Button type="success">成功按钮</Button>
-<Button type="warning">警告按钮</Button>
-<Button type="error">危险按钮</Button>
-`'/>
+<Button type='success'>成功按钮</Button>
+<Button type='warning'>警告按钮</Button>
+<Button type='error'>危险按钮</Button>
+```
 
 </Card> 
 <br>
@@ -40,12 +41,12 @@ app.use(Button);
 
 ### 字体按钮
 通过设置`text`属性可启用字体按钮
-<Code language="html" :content='`
+```html
 <Button text>默认按钮</Button>
-<Button text type="success">成功按钮</Button>
-<Button text type="warning">警告按钮</Button>
-<Button text type="error">危险按钮</Button>
-`'/>
+<Button text type='success'>成功按钮</Button>
+<Button text type='warning'>警告按钮</Button>
+<Button text type='error'>危险按钮</Button>
+```
 
 </Card> 
 <br>
@@ -53,12 +54,12 @@ app.use(Button);
 
 ### 空心按钮
 通过设置`plain`属性可启用空心按钮
-<Code language="html" :content='`
+```html
 <Button plain>默认按钮</Button>
-<Button plain type="success">成功按钮</Button>
-<Button plain type="warning">警告按钮</Button>
-<Button plain type="error">危险按钮</Button>
-`'/>
+<Button plain type='success'>成功按钮</Button>
+<Button plain type='warning'>警告按钮</Button>
+<Button plain type='error'>危险按钮</Button>
+```
 
 </Card> 
 <br>
@@ -66,14 +67,14 @@ app.use(Button);
 
 ### 圆角按钮
 通过设置`round`属性可启用圆角按钮
-<Code language="html" :content='`
+```html
 <Button plain round>默认按钮</Button>
-<Button plain round type="success">成功按钮</Button>
-<Button plain round type="warning">警告按钮</Button>\n
+<Button plain round type='success'>成功按钮</Button>
+<Button plain round type='warning'>警告按钮</Button>\n
 <Button round>默认按钮</Button>
-<Button round type="success">成功按钮</Button>
-<Button round type="warning">警告按钮</Button>
-`'/>
+<Button round type='success'>成功按钮</Button>
+<Button round type='warning'>警告按钮</Button>
+```
 
 </Card> 
 <br>
@@ -81,25 +82,26 @@ app.use(Button);
 
 ### 按钮尺寸
 `size`属性支持`large` 、`normal`、`small`，默认`normal`
-<Code language="html" :content='`
-<Button size="large">默认按钮</Button>
-<Button size="normal">默认按钮</Button>
-<Button size="small">默认按钮</Button>
-`'/>
+```html
+<Button size='large'>默认按钮</Button>
+<Button size='normal'>默认按钮</Button>
+<Button size='small'>默认按钮</Button>
+```
 
 </Card> 
 <br>
 <Card>
 
 ### 禁用按钮
-<Code language="html" :content='`
+```html
 <Button disabled>默认按钮</Button>
-<Button disabled type="success">成功按钮</Button>
-<Button disabled type="warning">警告按钮</Button>\n
+<Button disabled type='success'>成功按钮</Button>
+<Button disabled type='warning'>警告按钮</Button>
+
 <Button plain disabled>默认按钮</Button>
-<Button plain disabled type="success">成功按钮</Button>
-<Button plain disabled type="warning">警告按钮</Button>
-`'/>
+<Button plain disabled type='success'>成功按钮</Button>
+<Button plain disabled type='warning'>警告按钮</Button>
+```
 
 </Card> 
 <br>
@@ -107,18 +109,19 @@ app.use(Button);
 
 ### loading状态
 可通过参数控制`loading`状态也可通过内部`startLoading`和`endLoading`方法控制
-<Code language="html" :content='`
+```html
 <template>
   <Button loading>默认按钮</Button>
-  <Button loading type="success">成功按钮</Button>
-  <Button loading type="warning">成功按钮</Button>\n
+  <Button loading type='success'>成功按钮</Button>
+  <Button loading type='warning'>成功按钮</Button>\n
   <Button loading plain>默认按钮</Button>
-  <Button loading plain round type="success">成功按钮</Button>
-  <Button ref="button" @click="loading" plain type="warning">警告按钮</Button>
+  <Button loading plain round type='success'>成功按钮</Button>
+  <Button ref='button' @click='loading' plain type='warning'>警告按钮</Button>
 </template>
-`'/>
-<Code content='
-import { ref } from "vue";
+
+<script>
+import { ref } from 'vue';
+
 export default {
   setup() {
     const button = ref();
@@ -134,7 +137,8 @@ export default {
     };
   }
 };
-'/>
+</script>
+```
 
 </Card> 
 

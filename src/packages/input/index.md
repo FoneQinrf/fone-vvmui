@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-12 15:09:03
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 13:59:46
+ * @LastEditTime: 2021-05-11 14:33:01
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -13,12 +13,13 @@
 <Card> 
 
 ### 引入
-<Code :content="`
+```js
 import { createApp } from 'vue';
-import { Input } from 'vvmui';\n
+import { Input } from 'vvmui';
+
 const app = createApp();
 app.use(Input);
-`"/>
+```
 
 </Card>
 
@@ -26,39 +27,39 @@ app.use(Input);
 <Card> 
 
 ### 基本用法
-<Code language="html" :content='`
-<Input placeholder="请输入用户名" />
-<Input placeholder="请输入密码" type="password" />
-`'/>
+```html
+<Input placeholder='请输入用户名' />
+<Input placeholder='请输入密码' type='password' />
+```
 
 </Card> 
 <br>
 <Card> 
 
 ### 使用icon
-<Code language="html" :content='`
-<Input text-align="left" placeholder="请输入用户名" icon="iconuser" />
-<Input text-align="left" placeholder="请输入密码" icon="iconicon-mima" type="password" />
-`'/>
+```html
+<Input text-align='left' placeholder='请输入用户名' icon='iconuser' />
+<Input text-align='left' placeholder='请输入密码' icon='iconicon-mima' type='password' />
+```
 
 </Card> 
 <br>
 <Card> 
 
 ### 使用单位
-<Code language="html" :content='`
-<Input placeholder="请输入内容" unity="元" />
-`'/>
+```html
+<Input placeholder='请输入内容' unity='元' />
+```
 
 </Card> 
 <br>
 <Card> 
 
 ### 禁用
-<Code language="html" :content='`
-<Input placeholder="请输入内容" disabled />
-<Input v-model="value" disabled placeholder="请输入内容" />
-`'/>
+```html
+<Input placeholder='请输入内容' disabled />
+<Input v-model='value' disabled placeholder='请输入内容' />
+```
 
 </Card> 
 
