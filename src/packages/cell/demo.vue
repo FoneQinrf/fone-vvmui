@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-08 15:59:32
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-04-09 10:48:29
+ * @LastEditTime: 2021-05-11 13:37:24
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -33,11 +33,11 @@
         </template>
       </Cell>
       <Cell title="标题" value="副标题">
-          <template v-slot:default>
-            <p>实用</p>
-            <p>美观</p>
-            <p>帅气</p>
-          </template>
+        <template v-slot:default>
+          <p>实用</p>
+          <p>美观</p>
+          <p>帅气</p>
+        </template>
       </Cell>
     </CellGroup>
   </div>

@@ -1,140 +1,135 @@
-#{$name}button{
-    border: none;
-    padding: 22px 30px;
+#{$name}button {
+  border: none;
+  padding: 22px 30px;
+  color: #fff;
+  font-size: 14px;
+  // line-height: 1;
+  // display: flex;
+  #{$name}icon {
+    padding-right: 2px;
+  }
+  .text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  &::before {
+    position: absolute;
+    box-sizing: border-box;
+    content: ' ';
+    pointer-events: none;
+    top: -50%;
+    right: -50%;
+    bottom: -50%;
+    left: -50%;
+    transform: scale(0.5);
+  }
+  #{$name}loading.vvm-icon {
     color: #fff;
-    font-size: 14px;
-    // line-height: 1;
-    #{$name}icon{
-        padding-right: 2px;
+    padding: 0;
+  }
+  &#{$name}button--disabled {
+    opacity: 0.6;
+    &:active {
+      opacity: 0.6;
+      background-color: auto;
     }
-    .text{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
+  }
+  &--default {
+    background: $default-color;
+  }
+  &--success {
+    background: $success-color;
+  }
+  &--warning {
+    background: $warning-color;
+  }
+  &--error {
+    background: $error-color;
+  }
+  &--text {
+    padding: 8px 16px;
+    &#{$name}button--error {
+      color: $error-color;
+      background: none;
     }
-    &::before{
-        position: absolute;
-        box-sizing: border-box;
-        content: ' ';
-        pointer-events: none;
-        top: -50%;
-        right: -50%;
-        bottom: -50%;
-        left: -50%;
-        transform: scale(0.5);
+    &#{$name}button--warning {
+      color: $warning-color;
+      background: none;
     }
-    #{$name}loading-wrp{
-        #{$name}icon{
-            color: #fff;
-            padding: 0;
-        }
+    &#{$name}button--success {
+      color: $success-color;
+      background: none;
     }
-    &#{$name}button--disabled{
-        opacity: 0.6;
-        &:active{
-            opacity: 0.6;
-            background-color: auto;
-        }
+    &#{$name}button--default {
+      color: $default-color;
+      background: none;
     }
-    &--default{
-        background: $default-color;
+  }
+  &--plain {
+    background: none;
+    position: relative;
+    &#{$name}button--default {
+      color: $default-color;
+      &::before {
+        border: 0 solid $default-color;
+        border-width: 1px;
+      }
+      #{$name}loading.vvm-icon {
+        color: $default-color;
+      }
     }
-    &--success{
-        background: $success-color;
+    &#{$name}button--success {
+      color: $success-color;
+      &::before {
+        border: 0 solid $success-color;
+        border-width: 1px;
+      }
+      #{$name}loading.vvm-icon {
+        color: $success-color;
+      }
     }
-    &--warning{
-        background: $warning-color;
+    &#{$name}button--warning {
+      color: $warning-color;
+      &::before {
+        border: 0 solid $warning-color;
+        border-width: 1px;
+      }
+      #{$name}loading.vvm-icon {
+        color: $warning-color;
+      }
     }
-    &--error{
-        background: $error-color;
+    &#{$name}button--error {
+      color: $error-color;
+      &::before {
+        border: 0 solid $error-color;
+        border-width: 1px;
+      }
+      #{$name}loading.vvm-icon {
+        color: $error-color;
+      }
     }
-    &--text{
-        padding: 8px 16px;
-        &#{$name}button--error{
-            color: $error-color;
-            background: none;
-        }
-        &#{$name}button--warning{
-            color: $warning-color;
-            background: none;
-        }
-        &#{$name}button--success{
-            color: $success-color;
-            background: none;
-        }
-        &#{$name}button--default{
-            color: $default-color;
-            background: none;
-        }
+  }
+  &--round {
+    &#{$name}button {
+      border-radius: 10em;
     }
-    &--plain{
-        background: none;
-        position: relative;
-        &#{$name}button--default{
-            color: $default-color;
-            &::before{
-                border: 0 solid  $default-color;
-                border-width: 1px;
-            }
-            #{$name}loading-wrp{
-                #{$name}icon{
-                    color: $default-color;
-                }
-            }
-        }
-        &#{$name}button--success{
-            color: $success-color;
-            &::before{
-                border: 0 solid  $success-color;
-                border-width: 1px;
-            }
-            #{$name}loading-wrp{
-                #{$name}icon{
-                    color: $success-color;
-                }
-            }
-        }
-        &#{$name}button--warning{
-            color: $warning-color;
-            &::before{
-                border: 0 solid  $warning-color;
-                border-width: 1px;
-            }
-            #{$name}loading-wrp{
-                #{$name}icon{
-                    color: $warning-color;
-                }
-            }
-        }
-        &#{$name}button--error{
-            color: $error-color;
-            &::before{
-                border: 0 solid  $error-color;
-                border-width: 1px;
-            }
-            #{$name}loading-wrp{
-                #{$name}icon{
-                    color: $error-color;
-                }
-            }
-        }
+    &#{$name}button--plain {
+      &::before {
+        border-radius: 10em;
+      }
     }
-    &--round{
-        &#{$name}button{
-            border-radius: 10em;
-        }
-        &#{$name}button--plain{
-            &::before{
-                border-radius: 10em;
-            }
-        }
-    }
-    &--large{
-        display: block;
-        width: 100%;
-    }
-    &--small{
-        padding: 8px 16px;
-    }
+  }
+  &--large {
+    display: block;
+    width: 100%;
+  }
+  &--small {
+    padding: 8px 16px;
+  }
+  &--loading {
+    display: flex;
+    align-items: center;
+  }
 }

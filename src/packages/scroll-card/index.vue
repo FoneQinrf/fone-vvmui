@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-25 14:45:44
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-04-28 13:50:16
+ * @LastEditTime: 2021-05-09 21:19:32
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -26,7 +26,8 @@ import { getScrollHeight, getWindowHeight, getScrollTop } from '../utils';
 
 export default defineComponent({
   name: 'ScrollCard',
-  setup(props) {
+  emits: ['scroll'],
+  setup(props, { emit }) {
     const percen = ref(0);
 
     const style = computed(() => {
@@ -42,6 +43,7 @@ export default defineComponent({
       const b: number = getScrollHeight(children[0]) - a;
       const c: number = getScrollTop(e.target);
       percen.value = (c / b) * 100;
+      emit('scroll', percen.value);
     };
 
     return { style, scroll };

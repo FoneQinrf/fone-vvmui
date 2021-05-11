@@ -39,7 +39,7 @@ jobs:
           path: node_modules
           key: ${{runner.OS}}-${{hashFiles('**/yarn.lock')}}
 
-      - name: 推送 ${{ secrets.GIT_TOKEN }}
+      - name: 推送
         run: |
           cd ./dist
           git init

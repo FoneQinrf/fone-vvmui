@@ -2,17 +2,22 @@
  * @Author: Fone`峰
  * @Date: 2021-04-09 11:20:19
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-07 10:00:11
+ * @LastEditTime: 2021-05-10 10:21:32
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
 -->
 <template>
-  <transition name="vvm-fade">
+  <transition name="vvm-fade" @after-leave="close">
     <div v-if="status" :class="calsess">
       <div class="vvm-toast--icon" v-if="type !== 'info'">
-        <span :class="type === 'loading' ? 'vvm-loading' : ''">
-          <Icon :name="iconName" :size="40" color="#fff" />
+        <span>
+          <Icon
+            :class="type === 'loading' ? 'vvm-loading' : ''"
+            :name="iconName"
+            :size="40"
+            color="#fff"
+          />
         </span>
       </div>
       <div class="vvm-toast--info">

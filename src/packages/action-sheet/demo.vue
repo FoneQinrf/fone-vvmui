@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-09 11:20:41
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-04-29 22:09:45
+ * @LastEditTime: 2021-05-10 14:41:56
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -24,7 +24,7 @@
         <ActionSheet v-model="value" disabled :data="data1" />
       </FormItem>
     </Form>
-    <h4>期望展示取消按钮</h4>
+    <h4>展示取消按钮</h4>
     <Form>
       <FormItem label="请选择">
         <ActionSheet is-cancel :data="data1" />
@@ -44,40 +44,40 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from "vue";
-import { ActionSheet, Toast } from "@/vvmui";
+import { defineComponent, ref } from 'vue';
+import { ActionSheet, Toast } from '@/vvmui';
 
 export default defineComponent({
   setup() {
     const data1 = ref([
       {
-        label: "选择一",
-        value: 0,
+        label: '选择一',
+        value: 0
       },
       {
-        label: "选择二",
-        value: 1,
+        label: '选择二',
+        value: 1
       },
       {
-        label: "选择三",
-        value: 2,
-      },
+        label: '选择三',
+        value: 2
+      }
     ]);
 
     const data2 = ref([
       {
-        label: "选择一",
-        value: 0,
+        label: '选择一',
+        value: 0
       },
       {
-        label: "选择二",
+        label: '选择二',
         value: 1,
-        disabled: true,
+        disabled: true
       },
       {
-        label: "选择三",
-        value: 2,
-      },
+        label: '选择三',
+        value: 2
+      }
     ]);
 
     const show = () => {
@@ -85,13 +85,13 @@ export default defineComponent({
         data: data1.value,
         onConfirm: (val: any, opts: any) => {
           Toast.info(opts.label);
-        },
+        }
       });
     };
 
     const value = ref(1);
 
     return { show, data1, data2, value };
-  },
+  }
 });
 </script>

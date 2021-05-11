@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 15:21:36
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-07 10:00:30
+ * @LastEditTime: 2021-05-08 11:10:24
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -10,9 +10,10 @@
 <template>
   <button :disabled="currentDisabled" @click="click" :class="clasess">
     <template v-if="currentLoading">
-      <span class="vvm-loading-wrp"
+      <Icon class="vvm-loading" name="iconloading" />
+      <!-- <span class="vvm-loading-wrp"
         ><Icon class="vvm-loading" name="iconloading"
-      /></span>
+      /></span> -->
       {{ loadingText }}
     </template>
     <div class="text" v-else>
@@ -86,8 +87,9 @@ export default defineComponent({
         [`vvm-button--text`]: props.text,
         [`vvm-button--plain`]: props.plain,
         [`vvm-button--round`]: props.round,
-        [`vvm-button--${size || props.size}`]: props.size,
-        [`vvm-button--disabled`]: currentDisabled.value
+        [`vvm-button--${size || props.size}`]: size || props.size,
+        [`vvm-button--disabled`]: currentDisabled.value,
+        [`vvm-button--loading`]: currentLoading.value
       };
     });
 
