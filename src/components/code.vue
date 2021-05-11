@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-05-06 11:40:55
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-06 14:53:21
+ * @LastEditTime: 2021-05-10 10:38:37
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -13,7 +13,7 @@
       <div v-highlight="'js'" v-html="code"></div>
     </template>
     <template v-else>
-      <pre>
+<pre>
 <code v-highlight :class="['hljs',language]">
 {{code}}
 </code>
@@ -24,17 +24,18 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed } from 'vue';
+import { defineComponent, computed, ref } from 'vue';
 import { highlightBlock } from 'highlight.js';
 import 'highlight.js/styles/solarized-light.css';
 
 export default defineComponent({
   setup(props) {
+    const content = ref(props.content?.replace(/(^\s*)|(\s*$)/g, ''));
     const code = computed(() => {
       if (props.language === 'javascript') {
-        return `<pre><code class="hljs ${props.language}">${props.content}</code></pre>`;
+        return `<pre><code class="hljs ${props.language}">${content.value}</code></pre>`;
       }
-      return props.content;
+      return content.value;
     });
     return { code };
   },
@@ -74,10 +75,17 @@ export default defineComponent({
 }
 </style>
 
-<style>
+<style lang="scss">
 .code-wrp .hljs {
   position: relative;
-  padding: 2px 14px 14px 14px;
-   background: #fdf6e3;
+  padding: 2px 14px 16px 14px;
+  background: #fdf6e3;
+  border-radius: 6px;
+  // &:hover {
+  //   box-shadow: $B4 0 4px 12px;
+  // }
+}
+.code-wrp .hljs.javascript {
+  padding: 16px 14px 16px 14px;
 }
 </style>

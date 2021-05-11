@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-13 11:51:42
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-07 09:57:47
+ * @LastEditTime: 2021-05-10 15:08:53
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -86,7 +86,7 @@ export default defineComponent({
     const cancel = () => {
       showStatus.value = false;
       emit('cancel');
-      props.onClose();
+      props.onCancel();
       if (Element.value) {
         document.body.removeChild(Element.value);
       }
@@ -104,7 +104,7 @@ export default defineComponent({
 
     const close = () => {
       emit('close');
-      props.onClose();
+      props.onCancel();
       if (Element.value) {
         document.body.removeChild(Element.value);
       }
@@ -198,7 +198,7 @@ export default defineComponent({
       default: true
     },
     //create api 回调函数
-    onClose: {
+    onCancel: {
       type: Function,
       default: () => {}
     },

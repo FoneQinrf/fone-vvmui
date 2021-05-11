@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-05 20:28:15
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-07 13:56:42
+ * @LastEditTime: 2021-05-09 11:41:23
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -52,7 +52,7 @@ export default defineComponent({
   width: 375px;
   height: 667px;
   position: fixed;
-  top: 100px;
+  top: 80px;
   right: 20px;
   box-shadow: $B4 0 4px 12px;
   border-radius: 10px;

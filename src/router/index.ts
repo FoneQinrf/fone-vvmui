@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 15:44:28
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-04-15 15:13:38
+ * @LastEditTime: 2021-05-11 13:59:29
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -50,7 +50,7 @@ const router = createRouter({
 
 router.beforeEach((to, from, next) => {
     if (window) {
-        document.title = `vvmui${String(to.name === "/" ? "" : `-${String(to.name)}`)}`
+        document.title = `vvmui${String(to.name === "/" ? "" : `-${String(to.name)}`)}`;
     }
     next();
 })

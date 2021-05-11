@@ -38,7 +38,7 @@
           "path": "popup"
         },
         {
-          "name": "ScrollCard - 滑动视图条",
+          "name": "ScrollCard - 滑动视图",
           "path": "scroll-card"
         }
       ]

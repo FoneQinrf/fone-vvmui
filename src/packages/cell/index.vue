@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-08 16:13:09
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-04-28 17:00:22
+ * @LastEditTime: 2021-05-08 10:25:20
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -48,7 +48,7 @@ export default defineComponent({
     });
 
     const router = useRouter();
-    const click = (event: Event) => {
+    const click = () => {
       //router
       if (props.to && router) {
         console.log(props.to);
@@ -65,7 +65,7 @@ export default defineComponent({
           : (window.location.href = props.url);
       }
 
-      emit('click', event);
+      emit('click', props.query);
     };
 
     return { clasess, click, status };
