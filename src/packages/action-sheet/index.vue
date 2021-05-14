@@ -2,13 +2,13 @@
  * @Author: Fone`峰
  * @Date: 2021-04-13 11:51:42
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 15:08:53
+ * @LastEditTime: 2021-05-14 17:19:17
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
 -->
 <template>
-  <div class="vvm-actionsheet" @click="click">
+  <div class="vvm-actionsheet" @click.stop="click">
     <Input
       v-if="!createApi"
       :placeholder="placeholder"
@@ -24,17 +24,22 @@
       v-model:show="showStatus"
       position="bottom"
       :teleport="teleport"
+      :isTeleport="!!teleport"
     >
       <div class="vvm-actionsheet--content">
         <div
           v-for="(item, $index) in data"
           :class="itemClass($index, item)"
-          @click="choose(item)"
+          @click.stop="choose(item)"
         >
           {{ item.label }}
         </div>
         <div v-if="isCancel" :class="classButtom">
-          <p class="vvm-actionsheet--cancel" @click="cancel" v-if="isCancel">
+          <p
+            class="vvm-actionsheet--cancel"
+            @click.stop="cancel"
+            v-if="isCancel"
+          >
             {{ cancelText }}
           </p>
         </div>
@@ -44,7 +49,14 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType, ref, watch } from 'vue';
+import {
+  computed,
+  defineComponent,
+  onMounted,
+  PropType,
+  ref,
+  watch
+} from 'vue';
 import Input from '../input/index.vue';
 import Popup from '../popup/index.vue';
 import { find } from '../utils';
@@ -59,7 +71,7 @@ export default defineComponent({
     const showStatus = ref(false);
     const currentValue = ref(props.modelValue);
     const createApi = ref(false);
-    const Element: any = ref(null);
+    // const Element: any = ref(null);
 
     /**
      * 选中
@@ -74,10 +86,9 @@ export default defineComponent({
       }
     };
 
-    const show = (ele: any) => {
+    const show = () => {
       showStatus.value = true;
       createApi.value = true;
-      Element.value = ele;
     };
 
     /**
@@ -87,12 +98,13 @@ export default defineComponent({
       showStatus.value = false;
       emit('cancel');
       props.onCancel();
-      if (Element.value) {
-        document.body.removeChild(Element.value);
+      if (props.Element) {
+        document.body.removeChild(props.Element);
       }
     };
 
     const click = () => {
+      console.log('点击');
       if (!props.disabled && props.data.length > 0) {
         showStatus.value = true;
       }
@@ -105,10 +117,21 @@ export default defineComponent({
     const close = () => {
       emit('close');
       props.onCancel();
-      if (Element.value) {
-        document.body.removeChild(Element.value);
+      if (props.Element) {
+        document.body.removeChild(props.Element);
       }
     };
+    onMounted(() => {
+      if (props.show) {
+        show();
+      }
+    });
+    watch(
+      () => props.show,
+      (val) => {
+        val ? show() : close();
+      }
+    );
 
     watch(
       () => {
@@ -206,7 +229,9 @@ export default defineComponent({
       type: Function,
       default: () => {}
     },
-    teleport: [String, Element]
+    teleport: [String, Element],
+    show: Boolean,
+    Element: Element
   }
 });
 </script>

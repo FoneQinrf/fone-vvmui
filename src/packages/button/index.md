@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 15:21:42
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 14:26:47
+ * @LastEditTime: 2021-05-14 16:57:42
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -150,17 +150,17 @@ export default {
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
 | type  | 按钮类型       | String       | `default` `success` `warning` `error` | default |
-| text  | 是否字体按钮     | Boolean       | 无 | 无 |
-| plain  | 是否空心按钮     | Boolean    | 无 | 无 |
-| round  | 是否圆角按钮    | Boolean  | 无 | 无 |
+| text  | 是否字体按钮     | Boolean       | `true` `false` | false |
+| plain  | 是否空心按钮     | Boolean    | `true` `false` | false |
+| round  | 是否圆角按钮    | Boolean  | `true` `false` | false |
 | size  | 按钮大小    | String  | `large` `normal` `small` | normal |
-| disabled  |  是否禁用  | Boolean  | 无 | 无 |
-| loading  |  是否`loading`状态  | Boolean  | 无 | 无 |
-| loading-text  |  `loading`状态时展示的内容 | String  | 无 | 加载中.. |
-| query  |  vue-router跳转需要携带的数据   | Object  | 无 | 无 |
-| to  |   点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to)  | String  | 无 | 无 |
-| url  | 点击后跳转的地址    | String | 无 | 无 |
-| replace  | 是否使用replace来跳转    | Boolean  | 无 | false |
+| disabled  |  是否禁用  | Boolean  | `true` `false` | false |
+| loading  |  是否`loading`状态  | Boolean  | `true` `false` | false |
+| loading-text  |  `loading`状态时展示的内容 | String  | - | 加载中.. |
+| query  |  vue-router跳转需要携带的数据   | Object  | - | - |
+| to  |   点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to)  | String  | - | - |
+| url  | 点击后跳转的地址    | String | - | - |
+| replace  | 是否使用replace来跳转    | Boolean  | `true` `false` | false |
 
 </Card> 
 <br>
@@ -169,7 +169,7 @@ export default {
 ### Button solt
 | 名称 | 说明 |
 |------|------------|
-| 无  | 自定义主体内容 |
+| -  | 自定义主体内容 |
 
 </Card> 
 <br>

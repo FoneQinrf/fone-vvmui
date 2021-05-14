@@ -1,4 +1,4 @@
-#{$name}input{
+.vvm-input{
     display: flex;
     align-items: center;
     position: relative;
@@ -24,22 +24,22 @@
         color: $B2;
     }
     &--disabled{
-        #{$name}input--text{
+        .vvm-input--text{
             user-select: none;
         }
     }
     &--right{
-        #{$name}input--text{
+        .vvm-input--text{
             text-align: right;
         }
     }
     &--left{
-        #{$name}input--text{
+        .vvm-input--text{
             text-align: left;
         }
     }
     &--center{
-        #{$name}input--text{
+        .vvm-input--text{
             text-align: center;
         }
     }

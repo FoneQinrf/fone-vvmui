@@ -2,20 +2,20 @@
  * @Author: Fone`峰
  * @Date: 2021-04-14 14:15:39
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-09 17:07:58
+ * @LastEditTime: 2021-05-14 17:14:08
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
 -->
 <template>
-  <Teleport :to="toTeleport">
+  <Teleport :to="toTeleport" :disabled="isTeleport">
     <template v-if="isScroll">
       <Transition name="vvm-fade">
         <div
           @mousewheel.prevent
           @touchmove.prevent
-          @click.top="click"
-          v-show="isOverlay"
+          @click.stop="click"
+          v-if="isOverlay"
           class="vvm-popup--overlay"
         ></div>
       </Transition>
@@ -23,8 +23,8 @@
     <template v-else>
       <Transition name="vvm-fade">
         <div
-          @click.top="click"
-          v-show="isOverlay"
+          @click.stop="click"
+          v-if="isOverlay"
           class="vvm-popup--overlay"
         ></div>
       </Transition>
@@ -34,7 +34,7 @@
       @after-enter="onOpened"
       @after-leave="onClosed"
     >
-      <div v-show="show" :class="classes">
+      <div v-if="show" :class="classes">
         <slot />
       </div>
     </Transition>
@@ -67,7 +67,9 @@ export default defineComponent({
       emit('open');
     };
     const onClosed = () => {
-      emit('close');
+      setTimeout(() => {
+        emit('close');
+      }, 400);
     };
 
     const isOverlay = computed(() => {
@@ -131,6 +133,10 @@ export default defineComponent({
     onClickOverlay: {
       type: Boolean,
       default: true
+    },
+    isTeleport: {
+      type: Boolean,
+      default: false
     }
   }
 });

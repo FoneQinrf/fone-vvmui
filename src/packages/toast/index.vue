@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-09 11:20:19
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 10:21:32
+ * @LastEditTime: 2021-05-12 10:33:58
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -34,7 +34,7 @@
 </template>
 
 <script lang="ts">
-import { computed, defineComponent, PropType, ref } from 'vue';
+import { computed, defineComponent, onMounted, PropType, ref } from 'vue';
 import Icon from '../icon/index.vue';
 import { getConfig } from '../config';
 
@@ -59,8 +59,12 @@ export default defineComponent({
       }
     };
 
-    const show = (): void => {
+    onMounted(() => {
       status.value = true;
+      show();
+    });
+
+    const show = (): void => {
       if (props.type !== 'loading') {
         tiemr = setTimeout(() => {
           status.value = false;

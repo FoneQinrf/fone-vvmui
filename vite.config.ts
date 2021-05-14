@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 11:27:52
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 13:09:59
+ * @LastEditTime: 2021-05-14 10:41:47
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -13,7 +13,6 @@ const { resolve } = require('path');
 import Markdown from 'vite-plugin-md';
 import vueJsx from '@vitejs/plugin-vue-jsx';
 import { getLanguage, highlight } from 'highlight.js';
-// import {  } from "./src/packages/card/index.vue";
 
 // https://vitejs.dev/config/
 export default defineConfig({

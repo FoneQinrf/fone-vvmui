@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-22 17:53:16
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 16:30:15
+ * @LastEditTime: 2021-05-14 10:00:51
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -27,7 +27,6 @@ export const find = (a: any, b: any, c: string = '') => {
   }
   return a.find((ele: any) => ele === b);
 };
-
 
 /**
  * sort

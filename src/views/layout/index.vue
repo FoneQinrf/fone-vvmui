@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-04 22:48:46
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 14:29:46
+ * @LastEditTime: 2021-05-14 15:37:49
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -12,7 +12,7 @@
     <Nav />
     <div v-copy-code class="doc-main vvm-scrollbar">
       <router-view v-slot="{ Component }">
-        <transition name="vvm-fade">
+        <transition>
           <keep-alive>
             <component :is="Component" />
           </keep-alive>
@@ -28,6 +28,7 @@ import { defineComponent, nextTick } from 'vue';
 import Nav from './components/docNav.vue';
 import Demo from './components/demo.vue';
 import { Toast } from '@/vvmui';
+import 'highlight.js/styles/solarized-light.css';
 
 export default defineComponent({
   name: 'layout',
