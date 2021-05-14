@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dialog should render cancel button and text correctly 1`] = `"<button class=\\"vvm-button vvm-button--default vvm-button--text vvm-button--large vvm-hairline-right --dialog-cancel\\"><div class=\\"text\\">custom cancel</div></button>"`;
+
+exports[`Dialog should render confirm button and text correctly 1`] = `"<button class=\\"vvm-button vvm-button--default vvm-button--text vvm-button--large --dialog-confirm\\"><div class=\\"text\\">确认</div></button>"`;
+
+exports[`Dialog should render dialog correctly 1`] = `"<div class=\\"vvm-dialog--body --none-title\\"><div class=\\"vvm-dialog--title\\">标题</div><div class=\\"vvm-dialog--content\\"></div><div class=\\"vvm-dialog--button vvm-hairline-top\\"><!--v-if--><button class=\\"vvm-button vvm-button--default vvm-button--text vvm-button--large --dialog-confirm\\"><div class=\\"text\\">确认</div></button></div></div>"`;
+
+exports[`Dialog should render msg slot correctly 1`] = `"<div class=\\"vvm-dialog--content\\"><span>custom msg</span></div>"`;
+
+exports[`Dialog should render msg text correctly 1`] = `"<div class=\\"vvm-dialog--content\\">custom msg</div>"`;
+
+exports[`Dialog should render title slot correctly 1`] = `"<div class=\\"vvm-dialog--title\\"><span>custom title</span></div>"`;
+
+exports[`Dialog should render title text correctly 1`] = `"<div class=\\"vvm-dialog--title\\">custom title</div>"`;
