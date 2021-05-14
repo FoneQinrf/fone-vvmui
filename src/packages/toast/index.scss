@@ -1,4 +1,4 @@
-#{$name}toast{
+.vvm-toast{
     &--body{
         position: fixed;
         top: 50%;
@@ -18,7 +18,7 @@
         &.--success,&.--error,&.--warning,&.--loading{
             border-radius: 6px;
             padding: 10px 40px;
-            #{$name}toast--icon{
+            .vvm-toast--icon{
                 padding: 4px 0;
                 text-align: center;
             }

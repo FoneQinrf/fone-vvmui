@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-08 15:59:25
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 14:20:56
+ * @LastEditTime: 2021-05-14 16:57:24
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -94,15 +94,15 @@ app.use(CellGroup);
 ### Cell props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
-| title  | 标题       | String       | 无 | 无 
-| value  | 副标题      | String       | 无 | 无 |
-| content  | 内容      | String    | 无 | 无 |
-| arrow  | 是否启用右侧箭头       | Boolean  | 无 | 无 |
-| arrow-icon  | 右侧自定义`icon`    | String  | 无 | iconarrow-right-bold |
-| to  |   点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to)  | String  | 无 | 无 |
-| query  |  vue-router跳转需要携带的数据   | Object  | 无 | 无 |
-| url  | 点击后跳转的地址    | String | 无 | 无 |
-| replace  | 是否使用replace来跳转    | Boolean  | 无 | false |
+| title  | 标题       | String       | - | - 
+| value  | 副标题      | String       | - | - |
+| content  | 内容      | String    | - | - |
+| arrow  | 是否启用右侧箭头       | Boolean  | `true` `false` | false |
+| arrow-icon  | 右侧自定义`icon`    | String  | - | iconarrow-right-bold |
+| to  |   点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to)  | String  | - | - |
+| query  |  vue-router跳转需要携带的数据   | Object  | - | - |
+| url  | 点击后跳转的地址    | String | - | - |
+| replace  | 是否使用replace来跳转    | Boolean  | `true` `false` | false |
 
 </Card>
 <br>
@@ -119,7 +119,7 @@ app.use(CellGroup);
 ### Cell solt
 | 名称 | 说明 |
 |------|------------|
-| 无  | 自定义主体内容 |
+| -  | 自定义主体内容 |
 | title  | 自定义标题内容 |
 
 </Card> 

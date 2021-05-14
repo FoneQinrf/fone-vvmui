@@ -1,7 +1,38 @@
-#{$name}dialog{
-    &--body{
-        min-width: 200px;
-        height: 180px;
-        background-color: #fff;
+.vvm-dialog {
+  &--body {
+    min-width: 520px;
+    background-color: #fff;
+    border-radius: 8px;
+    &.--none-title{
+      padding: 12px 0;
     }
+  }
+  &--title {
+    padding: 26px 0 0 0;
+    text-align: center;
+    font-size: $size-15;
+    font-weight: bold;
+  }
+  &--content {
+    padding: 44px 20px 44px 20px;
+    font-size: 14px;
+    color: $B2;
+    text-align: center;
+    &.--title {
+      padding: 30px 20px 44px 20px;
+    }
+  }
+  &--button {
+    display: flex;
+    height: 90px;
+    box-sizing: border-box;
+    padding: 20px 0;
+    .vvm-button {
+      flex: 1;
+      font-size: $size-15;
+      &.--dialog-cancel {
+        color: $B3;
+      }
+    }
+  }
 }

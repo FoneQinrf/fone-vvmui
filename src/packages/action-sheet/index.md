@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-13 11:51:58
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 14:47:21
+ * @LastEditTime: 2021-05-14 17:19:35
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -14,8 +14,8 @@
 
 ### 引入
 ```js
-import { ActionSheet } from 'vue';
-import { Input } from 'vvmui';
+import { createApp } from 'vue';
+import { ActionSheet } from 'vvmui';
 
 const app = createApp();
 app.use(ActionSheet);
@@ -193,6 +193,7 @@ export default {
         value: 2,
       },
     ]);
+    
     ActionSheet.show({
       data: data.value,
       onConfirm: (val, opts) => {
@@ -211,6 +212,7 @@ export default {
 ```js
 import { ref } from 'vue';
 import { ActionSheet } from 'vvmui';
+
 export default {
   setup() {
     const data = ref([
@@ -227,7 +229,8 @@ export default {
         value: 2,
       },
     ]);
-    const ctx = ActionSheet.show({
+    
+    ActionSheet.show({
       data: data.value,
       onConfirm: (val, opts) => {
         console.log(val,opts.label);
@@ -245,15 +248,15 @@ export default {
 ### ActionSheet props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
-| data  | 选项数据源      | Array       | 无 | 无 |
-| v-model  | 选中数据中的`value`   | String / Number     | 无 | 无 
+| data  | 选项数据源      | Array       | - | - |
+| v-model  | 选中数据中的`value`   | String | Number     | - | - |
 | placeholder  | 占位内容     | String       | 无 | 请选择内容 |
-| disabled  | 是否禁用     | Boolean    | 无 | false |
-| is-cancel  | 是否是否显示取消按钮     | Boolean  | 无 | false |
-| cancel-text  | 取消按钮文字    | String  | 无 | 取消 |
+| disabled  | 是否禁用     | Boolean    | `true` `false` | false |
+| is-cancel  | 是否是否显示取消按钮     | Boolean  | `true` `false` | false |
+| cancel-text  | 取消按钮文字    | String  | - | 取消 |
 | textAlign  |  内容展示方式   | String  | `left` `right` `center` | right |
 | onClickOverlay  | 点击背景是否关闭   | Boolean  |  `true` `false` | true |
-| teleport  |  期望渲染在的节点内  | String  | 无 | body |
+| teleport  |  期望渲染在的节点内  | String  | - | body |
 
 </Card>
 <br>
@@ -262,7 +265,7 @@ export default {
 ### ActionSheet solt
 | 名称 | 说明 |
 |------|------------|
-| 无  | 自定义主体内容 |
+| -  | 自定义主体内容 |
 
 </Card>
 <br>
@@ -272,9 +275,9 @@ export default {
 | 事件名 | 说明 | 回调参数 |
 |------|------------|------------|
 | choose | 选中调用 |  选中的value和整个对象 |
-| cancel | 点击取消调用 |  无  |
-| open | 打开时触发 |  无  |
-| close | 关闭时触发 |  无  |
+| cancel | 点击取消调用 |  -  |
+| open | 打开时触发 |  -  |
+| close | 关闭时触发 |  - |
 
 </Card>
 
@@ -285,7 +288,7 @@ export default {
 | 方法 | 说明 | 参数 | 返回值 | 
 |------|------------|------------|------------|
 | ActionSheet.show |  展示`ActionSheet`  | `options`  | ActionSheet实例 | 
-| ActionSheet.cancel |  关闭`ActionSheet`  |  无  | 无 | 
+| ActionSheet.cancel |  关闭`ActionSheet`  |  - | - | 
 
 </Card>
 <br>
@@ -294,14 +297,13 @@ export default {
 ### Options
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
-| data  | 选项数据源      | Array       | 无 | 无 |
-| is-cancel  | 是否是否显示取消按钮     | Boolean  | 无 | false |
-| cancel-text  | 取消按钮文字    | String  | 无 | 取消 |
+| data  | 选项数据源      | Array       | - | - |
+| is-cancel  | 是否是否显示取消按钮     | Boolean  | `true` `false` | false |
+| cancel-text  | 取消按钮文字    | String  | - | 取消 |
 | onClickOverlay  | 点击背景是否关闭   | Boolean  |  `true` `false` | true |
-| teleport  |  期望渲染在的节点内  | String  | 无 | body |
-| className  |  自定义类名 | String  | 无 | vvm-actionsheet--wrp |
-| onConfirm  |  选中时回调方法 | Function  | 无 | (value, item) |
-| onCancel  |  关闭的回调方法 | Function  | 无 | 无 |
+| className  |  自定义类名 | String  | - | vvm-actionsheet--wrp |
+| onConfirm  |  选中时回调方法 | Function  | - | (value, item) |
+| onCancel  |  关闭的回调方法 | Function  | - | - |
 
 </Card>
 <br>

@@ -1,27 +1,33 @@
-#{$name}fade-enter-active,
-#{$name}fade-leave-active
- {
+.vvm-fade-enter-active,
+.vvm-fade-leave-active {
   transition: opacity 0.5s ease-out;
 }
-#{$name}fade-enter-from,
-#{$name}fade-leave-to
-{
+.vvm-fade-enter-from,
+.vvm-fade-leave-to {
   opacity: 0;
 }
 
 .vvm-slide-center-enter-active,
 .vvm-slide-center-leave-active {
-  transform: translate3d(-50%, -50%, 0) scale(0.7);
+  transition: all 0.25s;
+}
+.vvm-slide-center-leave-from {
+  opacity: 1;
+}
+.vvm-slide-center-leave-to {
   opacity: 0;
 }
-.vvm-slide-center-enter-from,
-.vvm-slide-center-leave-to  {
-  transform: translate3d(-50%, -50%, 0) scale(0.9);
-  // opacity: 0;
+.vvm-slide-center-enter-from {
+  transform: scale(0.5);
+  opacity: 0;
+}
+.vvm-slide-center-leave-to {
+  transform: scale(1);
+  opacity: 0;
 }
 
 //右出现
-.vvm-slide-right-enter-active{
+.vvm-slide-right-enter-active {
   transition: all 0.4s ease-out;
 }
 .vvm-slide-right-leave-active {
@@ -32,9 +38,8 @@
   transform: translate(100%, 0);
 }
 
-
 //左出现
-.vvm-slide-left-enter-active{
+.vvm-slide-left-enter-active {
   transition: all 0.4s ease-out;
 }
 .vvm-slide-left-leave-active {
@@ -46,7 +51,7 @@
 }
 
 //上出现
-.vvm-slide-top-enter-active{
+.vvm-slide-top-enter-active {
   transition: all 0.4s ease-out;
 }
 .vvm-slide-top-leave-active {
@@ -57,9 +62,8 @@
   transform: translate(0, -100%);
 }
 
-
 //下出现
-.vvm-slide-bottom-enter-active{
+.vvm-slide-bottom-enter-active {
   transition: all 0.4s ease-out;
 }
 .vvm-slide-bottom-leave-active {
@@ -70,23 +74,30 @@
   transform: translate(0, 100%);
 }
 
-.vvm-loading{
+.vvm-loading {
   display: inline-block;
   animation: rotating 1.3s linear infinite;
 }
 
-@keyframes rotating{
-  0%{-webkit-transform:rotateZ(0);transform:rotateZ(0)}
-  100%{-webkit-transform:rotateZ(360deg);transform:rotateZ(360deg)}
+@keyframes rotating {
+  0% {
+    -webkit-transform: rotateZ(0);
+    transform: rotateZ(0);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
+  }
 }
 
 .FormItem-slide-fade-enter-active {
-  transition: all .3s ease;
+  transition: all 0.3s ease;
 }
 .FormItem-slide-fade-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.FormItem-slide-fade-enter, .FormItem-slide-fade-leave-to {
+.FormItem-slide-fade-enter,
+.FormItem-slide-fade-leave-to {
   transform: translateX(-10px);
   opacity: 0;
 }

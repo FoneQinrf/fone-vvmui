@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-14 14:16:05
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-04-19 15:13:27
+ * @LastEditTime: 2021-05-13 16:55:47
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -73,16 +73,19 @@ export default defineComponent({
 .center {
   width: 100px;
   height: 100px;
+  background: #fff;
 }
 .bottom,
 .top {
   width: 100%;
   height: 200px;
+  background: #fff;
 }
 .left,
 .right {
   width: 200px;
   height: 100%;
+  background: #fff;
 }
 </style>
 

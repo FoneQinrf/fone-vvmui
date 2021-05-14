@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-25 14:46:04
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 14:31:03
+ * @LastEditTime: 2021-05-14 16:58:09
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -43,7 +43,7 @@ app.use(ScrollCard);
 ### ScrollCard props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
-| color | 进度条的颜色   | String       | 无 | #3778E1 |
+| color | 进度条的颜色   | String       | - | #3778E1 |
 
 </Card>
 <br>
@@ -52,7 +52,7 @@ app.use(ScrollCard);
 ### ScrollCard solt
 | 名称 | 说明 |
 |------|------------|
-| 无  | 自定义主体内容 |
+| - | 自定义主体内容 |
 
 </Card>
 <br>

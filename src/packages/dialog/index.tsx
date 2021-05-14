@@ -2,100 +2,128 @@
  * @Author: Fone`峰
  * @Date: 2021-04-16 17:27:39
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-04-24 15:41:19
+ * @LastEditTime: 2021-05-14 16:46:15
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  */
-import {
-  defineComponent,
-  ref,
-  createVNode,
-  render,
-  getCurrentInstance
-} from 'vue';
+import { defineComponent, ref, createVNode, render, onMounted } from 'vue';
 import Dialog from './Dialog.vue';
-
-import { debounce } from '../utils';
-
-// export type DialogMessage = string | (() => JSX.Element);
+import { isString, createAssign } from '../utils';
 
 let component: any = null;
+let container: any = null;
 
-const container = document.createElement('div');
-container.className = 'vvm-dialog';
+const App = () =>
+  defineComponent({
+    setup(props: any) {
+      const show = ref(false);
 
-const App = defineComponent({
-  props: {
-    message: {
-      type: [String, Function],
-      default() {}
-    }
-  } as any,
-  setup(props) {
-    const dialog = ref();
+      const close = () => {
+        document.body.removeChild(container);
+        component = null;
+        container = null;
+      };
 
-    const visible = () => {
-      dialog.value.visible();
-    };
-
-    const renderMessage = () => {
-      if (typeof props.message !== 'string') {
-        return (
-          <div class="vvm-dialog--content">
-            {{
-              default: () => props.message()
-            }}
-          </div>
-        );
-      }
-      return <div>{props.message}</div>;
-    };
-
-    return { renderMessage, visible, dialog, ...props };
-  },
-  render() {
-    const renderMessage = () => {
-      if (typeof this.message !== 'string') {
-        return (
-          <div class="vvm-dialog--content">
-            {{
-              default: () => this.message()
-            }}
-          </div>
-        );
-      }
-      return <div>{this.message}</div>;
-    };
-
-    return (
-      <Dialog ref="dialog" teleport={container}>
-        {renderMessage()}
-      </Dialog>
-    );
-  }
-});
-
-const install = (opts: any = {}) => {
-  const instance: any = createVNode(App, opts);
-  render(instance, container);
-  component = instance.component.ctx;
-  document.body.appendChild(container);
-  // component.$refs.dialog.visible();
-  component.visible();
-};
-
-export const model = {
-  info(opts: any = {}) {
-    if (!component) {
-      install({
-        message: () => <div>Vue 3.0</div>
+      onMounted(() => {
+        show.value = true;
+        if (component) {
+          component.close = () => {
+            show.value = false;
+          };
+        }
       });
-    }
-    // Object.assign(app, { show: true, title: <span>2222</span> }, opts)
+
+      //button cancel
+      const onCancel = () => {
+        props.onCancel();
+      };
+      //button confirm
+      const onConfirm = () => {
+        props.onConfirm();
+      };
+
+      const update = () => {
+        show.value = false;
+        close();
+        props.onClose();
+      };
+
+      const slots: any = {
+        default: isString(props.msg) ? props.msg : props.msg(),
+        title: isString(props.title) ? props.title : props.title()
+      };
+
+      return () => {
+        const {
+          msg,
+          confirmText,
+          onConfirmClose,
+          onCancelClose,
+          title,
+          teleport,
+          onClickOverlay,
+          showTitle,
+          showButton,
+          showCancel,
+          showConfirm,
+          cancelText
+        } = props;
+
+        return (
+          <Dialog
+            v-slots={slots}
+            show={show.value}
+            msg={msg}
+            title={title}
+            teleport={teleport}
+            onClickOverlay={onClickOverlay}
+            showTitle={showTitle}
+            showButton={showButton}
+            showCancel={showCancel}
+            showConfirm={showConfirm}
+            cancelText={cancelText}
+            confirmText={confirmText}
+            onConfirmClose={onConfirmClose}
+            onCancelClose={onCancelClose}
+            {...{ onClose: update, onCancel: onCancel, onConfirm: onConfirm }}
+          ></Dialog>
+        );
+      };
+    },
+    props: createAssign(Dialog.props, {
+      onConfirm: {
+        type: Function,
+        default: () => {}
+      },
+      onCancel: {
+        type: Function,
+        default: () => {}
+      },
+      onClose: {
+        type: Function,
+        default: () => {}
+      }
+    })
+  });
+
+const install = (opts: any) => {
+  container = document.createElement('div');
+  container.className = 'vvm-dialog--wrp';
+  const instance: any = createVNode(
+    App(),
+    createAssign({ teleport: container }, { ...opts })
+  );
+  component = instance;
+  render(instance, container);
+  document.body.appendChild(container);
+};
+
+Dialog.alert = (opts: any = {}) => {
+  if (!component) {
+    install(opts);
+    return component;
   }
 };
 
-export default {
-  ...model
-};
+export default Dialog;

@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-12 15:09:03
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 14:33:01
+ * @LastEditTime: 2021-05-14 17:03:30
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -70,17 +70,17 @@ app.use(Input);
 ### Input props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
-| v-model  | 当前输入的值       | String / Number       | 无 | 无 |
-| placeholder  |   占位内容   | String       | 无 | 请输入内容 |
+| v-model  | 当前输入的值       | String | Number       | - | - |
+| placeholder  |   占位内容   | String       | - | 请输入内容 |
 | type  | 输入框的类型     | String    | `text` `password` | text |
-| maxLength  | 可输入长度    | Number  | 无 | 无 |
-| icon  | 头部`icon`    | String  | 无 | 无 |
-| unity  |  尾部展示的内容  | String  | 无 | 无 |
-| readonly  |  是否为只读状态，只读状态下无法输入内容  | Boolean  | 无 | false |
-| pattern  |  限制输入的正则 | String  | 无 |无 |
+| maxLength  | 可输入长度    | Number  | - | - |
+| icon  | 头部`icon`    | String  | - | - |
+| unity  |  尾部展示的内容  | String  | - | - |
+| readonly  |  是否为只读状态，只读状态下无法输入内容  | Boolean  | `true` `false` | false |
+| pattern  |  限制输入的正则 | String  | - | - |
 | textAlign  |  内容展示方式   | String  | `left` `right` `center` | right |
-| name  | 名称，提交表单的标识符    | String | 无 | 无 |
-| scroll-target  | 使用scroll的dom节点名称，ios系统键盘关闭不重绘页面scroll的可使用    | String  | 无 | 无 |
+| name  | 名称，提交表单的标识符    | String | - | - |
+| scroll-target  | 使用scroll的dom节点名称，ios系统键盘关闭不重绘页面scroll的可使用    | String  | - | - |
 
 </Card> 
 <br>
@@ -89,7 +89,7 @@ app.use(Input);
 ### Input solt
 | 名称 | 说明 |
 |------|------------|
-| 无  | 自定义尾部展示的内容 |
+| - | 自定义尾部展示的内容 |
 
 </Card> 
 <br>
