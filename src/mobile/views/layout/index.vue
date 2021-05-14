@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-07 14:42:03
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 11:21:57
+ * @LastEditTime: 2021-05-12 13:39:10
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -12,7 +12,7 @@
     <div v-if="frame" class="nav">{{ name }}</div>
     <div :class="frame ? 'router-view frame' : 'router-view'">
       <router-view v-slot="{ Component }">
-        <transition name="vvm-fade">
+        <transition>
           <keep-alive>
             <component :is="Component" />
           </keep-alive>

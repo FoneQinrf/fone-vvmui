@@ -2,47 +2,175 @@
  * @Author: Fone`峰
  * @Date: 2021-04-19 16:49:56
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-04-19 18:14:23
+ * @LastEditTime: 2021-05-14 17:08:14
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
 -->
 <template>
-  <Popup :teleport="teleport" v-model:show="show">
-    <div class="vvm-dialog--body">
-      <div class="vvm-dialog--content">
-        <slot />
-      </div>
+  <Teleport :to="teleport" :disabled="!teleport">
+    <div class="vvm-dialog">
+      <Popup
+        @update:show="update"
+        @close="close"
+        v-model:show="show"
+        :onClickOverlay="onClickOverlay"
+        :isTeleport="true"
+      >
+        <div :class="classes">
+          <div v-if="showTitle" class="vvm-dialog--title">
+            <slot name="title">
+              {{ title }}
+            </slot>
+          </div>
+          <div class="vvm-dialog--content">
+            <slot>{{ msg }}</slot>
+          </div>
+          <div
+            v-if="showCancel || showConfirm"
+            class="vvm-dialog--button vvm-hairline-top"
+          >
+            <Button
+              v-if="showCancel"
+              text
+              size="large"
+              @click="onCancel"
+              :class="
+                showCancel && showConfirm
+                  ? 'vvm-hairline-right --dialog-cancel'
+                  : ''
+              "
+            >
+              {{ cancelText }}
+            </Button>
+            <Button
+              class="--dialog-confirm"
+              v-if="showConfirm"
+              @click="onConfirm"
+              text
+              size="large"
+            >
+              {{ confirmText }}
+            </Button>
+          </div>
+        </div>
+      </Popup>
     </div>
-  </Popup>
+  </Teleport>
 </template>
 
 <script lang="ts">
-import { defineComponent, onMounted, ref } from "vue";
-import Popup from "../popup/index.vue";
+import { computed, defineComponent, onMounted, ref, watch } from 'vue';
+import Popup from '../popup/index.vue';
+import Button from '../button/index.vue';
+
+const props = {
+  msg: {
+    type: [String, Function],
+    default: ''
+  },
+  title: {
+    type: [String, Function],
+    default: '标题'
+  },
+  onClickOverlay: {
+    type: Boolean,
+    default: false
+  },
+  show: Boolean,
+  showTitle: {
+    type: Boolean,
+    default: true
+  },
+  // showButton: {
+  //   type: Boolean,
+  //   default: true
+  // },
+  showCancel: {
+    type: Boolean,
+    default: false
+  },
+  showConfirm: {
+    type: Boolean,
+    default: true
+  },
+  cancelText: {
+    type: String,
+    default: '取消'
+  },
+  confirmText: {
+    type: String,
+    default: '确认'
+  },
+  onConfirmClose: {
+    type: Boolean,
+    default: false
+  },
+  onCancelClose: {
+    type: Boolean,
+    default: true
+  },
+  teleport: {
+    type: [String, Element]
+  }
+};
 
 export default defineComponent({
-  name: "Dialog",
-  components: { Popup },
-  emits: ["load"],
-  props: {
-    teleport: {
-      type: [String, Element],
-    },
-  },
+  name: 'Dialog',
+  components: { Popup, Button },
+  emits: ['update', 'close', 'cancel', 'confirm', 'update:show'],
+  props,
   setup(props, { emit }) {
     const show = ref(false);
 
-    const visible = () => {
-      console.log("zhixing");
-      show.value = true;
+    onMounted(() => {
+      show.value = props.show;
+    });
+
+    watch(
+      () => props.show,
+      (val) => {
+        show.value = val;
+      }
+    );
+
+    const update = (val: boolean) => {
+      emit('update', val);
+      emit('update:show', val);
     };
 
-    // onMounted(() => {
-    //   emit("load", visible);
-    // });
+    const classes = computed(() => {
+      return {
+        [`vvm-dialog--body`]: true,
+        [`--none-title`]: !props.showCancel && props.showConfirm
+      };
+    });
 
-    return { show, visible };
-  },
+    const close = () => {
+      emit('close');
+    };
+
+    const onCancel = () => {
+      if (props.onCancelClose) {
+        show.value = false;
+      }
+      emit('cancel');
+    };
+    const onConfirm = () => {
+      if (props.onConfirmClose) {
+        show.value = false;
+      }
+      emit('confirm');
+    };
+
+    return {
+      show,
+      update,
+      classes,
+      close,
+      onCancel,
+      onConfirm
+    };
+  }
 });
 </script>

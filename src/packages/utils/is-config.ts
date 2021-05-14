@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-22 17:48:22
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-04-25 13:46:57
+ * @LastEditTime: 2021-05-12 17:52:58
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -43,6 +43,15 @@ export const isObject = (obj: any) => {
  */
 export const isArray = (obj: any) => {
   return _toString.call(obj) === '[object Array]';
+};
+
+/**
+ *
+ * @param obj
+ * @returns
+ */
+ export const isString = (obj: any) => {
+  return _toString.call(obj) === '[object String]';
 };
 
 /**

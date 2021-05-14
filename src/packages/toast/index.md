@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-09 11:20:47
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 14:57:05
+ * @LastEditTime: 2021-05-14 17:05:56
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -63,12 +63,12 @@ Toast.info('消息', {
 
 | 方法 | 说明 | 参数 | 返回值 | 
 |------|------------|------------|------------|
-| <span>Toast.info</span>| 提示   | `options` `msg`   | 无 | 
-| Toast.success |  成功提示   | `options` `msg`       | 无 | 
-| Toast.error | 错误提示   | `options` `msg`       | 无 | 
-| Toast.warning | 警告提示   | `options` `msg`       | 无 | 
-| Toast.loading | loading   | `options` `msg`       | 无 | 
-| Toast.close | 关闭`Toast`   |   无   | 无 | 
+| <span>Toast.info</span>| 提示   | `options` `msg`   | - | 
+| Toast.success |  成功提示   | `options` `msg`       | - | 
+| Toast.error | 错误提示   | `options` `msg`       | - | 
+| Toast.warning | 警告提示   | `options` `msg`       | - | 
+| Toast.loading | loading   | `options` `msg`       | - | 
+| Toast.close | 关闭`Toast`   |   -   | - | 
 
 </Card>
 <br>
@@ -77,11 +77,11 @@ Toast.info('消息', {
 ### Options
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
-| msg | 提示内容  | String  | 无 | 无 |
-| icon | 自定义图标  | String  | 无 | 无 |
-| duration | 延迟关闭的时间（ms）  | Number  | 无 | 1000 |
-| className | 自定义类名  | String  | 无 | 无 |
-| onClose | 关闭时的回调  | Function  | 无 | 无 |
+| msg | 提示内容  | String  | - | - |
+| icon | 自定义图标  | String  | - | - |
+| duration | 延迟关闭的时间（ms）  | Number  | - | 1000 |
+| className | 自定义类名  | String  | - | - |
+| onClose | 关闭时的回调  | Function  | - | - |
 
 </Card>
 <br>

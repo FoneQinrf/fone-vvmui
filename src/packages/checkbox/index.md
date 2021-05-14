@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-26 16:07:57
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 14:54:30
+ * @LastEditTime: 2021-05-14 17:05:23
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -135,12 +135,12 @@ export default {
 ### Checkbox props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
-| v-model  | 绑定值       | Boolean       | 无 | 无
+| v-model  | 绑定值       | Boolean       | `true` `false` | false |
 | type  | 不同的类型对应不同的主题色彩      | String       | `default` `errer` `success` `warning` | default |
-| label  | 选中状态的值      | String/Number/Boolean    | 无 | 无 |
-| disabled  | 是否禁用       | Boolean       | 无 | 无 |
+| label  | 选中状态的值      | String | Number | Boolean    | - | - |
+| disabled  | 是否禁用       | Boolean       | `true` `false` | false |
 | icon  | 自定义`Checkbox`选中的`icon`    | String       | 无 | iconroundcheckfill |
-| text-theme  | 选中时`label`字体是否跟随主题色变化    | Boolean       | 无 | false |
+| text-theme  | 选中时`label`字体是否跟随主题色变化    | Boolean     | `true` `false` | false |
 
 </Card>
 <br>
@@ -149,11 +149,11 @@ export default {
 ### CheckboxGroup props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
-| v-model  | 绑定值       | Array       | 无 | 无
+| v-model  | 绑定值       | Array       | - | - |
 | type  | 同`Checkbox`的`type`，设置所有子`Checkbox`     | String       | `default` `errer` `success` `warning` | default |
-| disabled  | 同`Checkbox`的`disabled`，设置所有子`Checkbox`       | Boolean       | 无 | 无 |
-| inline  | 调整`Checkbox`的布局方式    | Boolean       | 无 | true |
-| text-theme  | 同`Checkbox`的`text-theme`，设置所有子`Checkbox`    | Boolean       | 无 | false |
+| disabled  | 同`Checkbox`的`disabled`，设置所有子`Checkbox`       | Boolean  | `true` `false` | false |
+| inline  | 调整`Checkbox`的布局方式    | Boolean       | `true` `false` | true |
+| text-theme  | 同`Checkbox`的`text-theme`，设置所有子`Checkbox`    | Boolean   | `true` `false` | false |
 
 </Card>
 <br>
@@ -162,7 +162,7 @@ export default {
 ### Checkbox solt
 | 名称 | 说明 |
 |------|------------|
-| 无  | 自定义主体内容 |
+| -  | 自定义主体内容 |
 
 </Card>
 <br>

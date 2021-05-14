@@ -1,11 +1,11 @@
-#{$name}button {
+.vvm-button {
   border: none;
   padding: 22px 30px;
   color: #fff;
   font-size: 14px;
   // line-height: 1;
   // display: flex;
-  #{$name}icon {
+  .vvm-icon {
     padding-right: 2px;
   }
   .text {
@@ -25,11 +25,11 @@
     left: -50%;
     transform: scale(0.5);
   }
-  #{$name}loading.vvm-icon {
+  .vvm-loading.vvm-icon {
     color: #fff;
     padding: 0;
   }
-  &#{$name}button--disabled {
+  &.vvm-button--disabled {
     opacity: 0.6;
     &:active {
       opacity: 0.6;
@@ -50,19 +50,19 @@
   }
   &--text {
     padding: 8px 16px;
-    &#{$name}button--error {
+    &.vvm-button--error {
       color: $error-color;
       background: none;
     }
-    &#{$name}button--warning {
+    &.vvm-button--warning {
       color: $warning-color;
       background: none;
     }
-    &#{$name}button--success {
+    &.vvm-button--success {
       color: $success-color;
       background: none;
     }
-    &#{$name}button--default {
+    &.vvm-button--default {
       color: $default-color;
       background: none;
     }
@@ -70,52 +70,52 @@
   &--plain {
     background: none;
     position: relative;
-    &#{$name}button--default {
+    &.vvm-button--default {
       color: $default-color;
       &::before {
         border: 0 solid $default-color;
         border-width: 1px;
       }
-      #{$name}loading.vvm-icon {
+      .vvm-loading.vvm-icon {
         color: $default-color;
       }
     }
-    &#{$name}button--success {
+    &.vvm-button--success {
       color: $success-color;
       &::before {
         border: 0 solid $success-color;
         border-width: 1px;
       }
-      #{$name}loading.vvm-icon {
+      .vvm-loading.vvm-icon {
         color: $success-color;
       }
     }
-    &#{$name}button--warning {
+    &.vvm-button--warning {
       color: $warning-color;
       &::before {
         border: 0 solid $warning-color;
         border-width: 1px;
       }
-      #{$name}loading.vvm-icon {
+      .vvm-loading.vvm-icon {
         color: $warning-color;
       }
     }
-    &#{$name}button--error {
+    &.vvm-button--error {
       color: $error-color;
       &::before {
         border: 0 solid $error-color;
         border-width: 1px;
       }
-      #{$name}loading.vvm-icon {
+      .vvm-loading.vvm-icon {
         color: $error-color;
       }
     }
   }
   &--round {
-    &#{$name}button {
+    &.vvm-button {
       border-radius: 10em;
     }
-    &#{$name}button--plain {
+    &.vvm-button--plain {
       &::before {
         border-radius: 10em;
       }

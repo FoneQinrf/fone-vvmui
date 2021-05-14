@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-14 14:15:56
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 14:28:36
+ * @LastEditTime: 2021-05-14 16:57:03
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -63,12 +63,12 @@ app.use(Popup);
 ### Popup props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
-| v-model:show  | 是否显示弹出层     | Boolean       | `true` `false`  | 无 |
+| v-model:show  | 是否显示弹出层     | Boolean       | `true` `false`  | - |
 | overlay  | 是否需要遮罩层   | Boolean       | `true` `false`  | true |
 | position  | 期望出现的方式     | String    | `center` `top` `bottom` `right` `left` | center |
-| is-scroll  | 是否禁止触摸滑动   | Boolean  | `true` `false`  | 无 |
+| is-scroll  | 是否禁止触摸滑动   | Boolean  | `true` `false`  | - |
 | onClickOverlay  | 点击背景是否关闭   | Boolean  |  `true` `false` | true |
-| teleport  |  期望渲染在的节点内  | String  | 无 | body |
+| teleport  |  期望渲染在的节点内  | String  | - | body |
 
 </Card>
 <br>
@@ -86,8 +86,8 @@ app.use(Popup);
 ### Popup Events
 | 事件名 | 说明 | 回调参数 |
 |------|------------|------------|
-| open | 显示时触发 |  无  |
-| close | 隐藏时触发 |  无  |
+| open | 显示时触发 |  -  |
+| close | 隐藏时触发 |  -  |
 
 </Card>
 <br>

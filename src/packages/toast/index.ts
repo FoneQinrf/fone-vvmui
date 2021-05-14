@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-09 11:20:28
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 10:21:56
+ * @LastEditTime: 2021-05-12 13:44:20
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -21,7 +21,7 @@ let element: any = null;
 const removeToast = () => {
   if (AppToast && element) {
     document.body.removeChild(element);
-    AppToast.close();
+    // AppToast.close();
     AppToast = null;
     element = null;
   }
@@ -34,13 +34,15 @@ const removeToast = () => {
  */
 const creatToast = (opts: any) => {
   const container = document.createElement('div');
-  container.className = opts.className ? `vvm-toast ${opts.className}` : `vvm-toast`;
+  container.className = opts.className
+    ? `vvm-toast ${opts.className}`
+    : `vvm-toast`;
   const instance: any = createVNode(component, opts);
   render(instance, container);
   element = container;
-  AppToast = instance.component.ctx;
+  AppToast = instance.component.props;
   document.body.appendChild(container);
-  AppToast.show();
+  // AppToast.show();
   return AppToast;
 };
 

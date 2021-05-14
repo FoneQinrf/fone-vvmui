@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-15 16:02:29
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-10 14:43:22
+ * @LastEditTime: 2021-05-14 17:20:28
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -24,11 +24,13 @@ const install = (opts: any = {}) => {
   document.body.appendChild(container);
   const instance: any = createVNode(
     component,
-    createAssign(opts, { teleport: container })
+    createAssign(opts, { teleport: container, show: true, Element: container })
   );
   render(instance, container);
-  App = instance.component.ctx;
-  App.show(container);
+  App = instance;
+  App.cancel = () => {
+    createAssign(App.component.props, { show: false });
+  };
   return App;
 };
 
@@ -38,7 +40,8 @@ ActionSheet.show = (opts: any) => {
 
 ActionSheet.cancel = () => {
   if (App) {
-    App.cancel();
+    // App.cancel();
+    createAssign(App.component.props, { show: false });
   }
 };
 

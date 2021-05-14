@@ -32,13 +32,13 @@
     "dev:ui": "vite --config vite.config.vvmui.ts",
     "dev": "concurrently \"npm run dev:vite\" \"npm run watch:css\"",
     "watch:css": "gulp --gulpfile gulpfile.js",
-    "test": "jest"
+    "test": "jest -u"
   },
   "dependencies": {
     "highlight.js": "^10.7.2",
     "lodash": "^4.17.21",
     "vite-plugin-md": "^0.6.3",
-    "vue": "^3.0.9",
+    "vue": "^3.0.5",
     "vue-router": "^4.0.4"
   },
   "devDependencies": {

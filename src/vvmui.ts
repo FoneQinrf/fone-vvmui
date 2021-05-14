@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 12:17:01
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-07 10:50:07
+ * @LastEditTime: 2021-05-13 14:45:57
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -15,7 +15,7 @@ import Card from './packages/card/index.vue';
 import Icon from './packages/icon/index.vue';
 import CellGroup from './packages/cell-group/index.vue';
 import Cell from './packages/cell/index.vue';
-import Toast from './packages/toast/index';
+import Toast from './packages/toast';
 import Input from './packages/input/index.vue';
 import Form from './packages/form/index.vue';
 import FormItem from './packages/form-item/index.vue';

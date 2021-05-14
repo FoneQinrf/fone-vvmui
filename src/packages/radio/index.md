@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-15 17:05:15
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 14:55:39
+ * @LastEditTime: 2021-05-14 17:02:58
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -134,12 +134,12 @@ export default {
 ### Radio props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
-| v-model  | 绑定值       | Number / Boolean / String       | 无 | 无
+| v-model  | 绑定值       | Number | Boolean | String       | - | -
 | type  | 不同的类型对应不同的主题色彩      | String       | `default` `errer` `success` `warning` | default |
-| label  | 选中状态的值      | String/Number/Boolean    | 无 | 无 |
-| disabled  | 是否禁用       | Boolean       | 无 | 无 |
-| icon  | 自定义`Radio`选中的`icon`    | String       | 无 | iconroundcheckfill |
-| text-theme  | 选中时`label`字体是否跟随主题色变化    | Boolean       | 无 | false |
+| label  | 选中状态的值      | String| Number | Boolean    | - | - |
+| disabled  | 是否禁用       | Boolean       | `true` `false` | false |
+| icon  | 自定义`Radio`选中的`icon`    | String       | - | iconroundcheckfill |
+| text-theme  | 选中时`label`字体是否跟随主题色变化    | Boolean | `true` `false` | false |
 
 </Card>
 <br>
@@ -148,11 +148,11 @@ export default {
 ### RadioGroup props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 |------|------------|------------|------------|------------|
-| v-model  | 绑定值       | Number / String       | 无 | 无
-| type  | 同`Radio`的`type`，设置所有子`Radio`     | String       | `default` `errer` `success` `warning` | default |
-| disabled  | 同`Radio`的`disabled`，设置所有子`Radio`       | Boolean       | 无 | 无 |
-| inline  | 调整`Radio`的布局方式    | Boolean       | 无 | true |
-| text-theme  | 同`Radio`的`text-theme`，设置所有子`Radio`    | Boolean       | 无 | false |
+| v-model  | 绑定值       | Number | String       | - | -
+| type  | 同`Radio`的`type`，设置所有子`Radio`     | String     | `default` `errer` `success` `warning` | default |
+| disabled  | 同`Radio`的`disabled`，设置所有子`Radio`       | Boolean   | `true` `false` | false |
+| inline  | 调整`Radio`的布局方式    | Boolean       | `true` `false` | true |
+| text-theme  | 同`Radio`的`text-theme`，设置所有子`Radio`    | Boolean   | `true` `false` | false |
 
 </Card>
 <br>
@@ -161,7 +161,7 @@ export default {
 ### Radio solt
 | 名称 | 说明 |
 |------|------------|
-| 无  | 自定义主体内容 |
+| -  | 自定义主体内容 |
 
 </Card>
 <br>
