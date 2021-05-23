@@ -61,6 +61,10 @@
         {
           "name": "Checkbox - 多选",
           "path": "checkbox"
+        },
+        {
+          "name": "Switch - 开关",
+          "path": "switch"
         }
       ]
     },

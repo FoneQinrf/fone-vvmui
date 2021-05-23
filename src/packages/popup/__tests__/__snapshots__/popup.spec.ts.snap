@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Popup should click overlay corretly 1`] = `
+"<!--teleport start-->
+<transition-stub>
+  <div class=\\"vvm-popup--overlay\\"></div>
+</transition-stub>
+<transition-stub>
+  <div class=\\"vvm-popup vvm-popup--left\\"></div>
+</transition-stub>
+<!--teleport end-->"
+`;
+
+exports[`Popup should render overlay corretly 1`] = `
+"<!--teleport start-->
+<transition-stub>
+  <!--v-if-->
+</transition-stub>
+<transition-stub>
+  <div class=\\"vvm-popup vvm-popup--left\\"></div>
+</transition-stub>
+<!--teleport end-->"
+`;
+
+exports[`Popup should render position corretly 1`] = `
+"<!--teleport start-->
+<transition-stub>
+  <div class=\\"vvm-popup--overlay\\"></div>
+</transition-stub>
+<transition-stub>
+  <div class=\\"vvm-popup vvm-popup--center\\"></div>
+</transition-stub>
+<!--teleport end-->"
+`;
+
+exports[`Popup should render position corretly 2`] = `
+"<!--teleport start-->
+<transition-stub>
+  <div class=\\"vvm-popup--overlay\\"></div>
+</transition-stub>
+<transition-stub>
+  <div class=\\"vvm-popup vvm-popup--top\\"></div>
+</transition-stub>
+<!--teleport end-->"
+`;
+
+exports[`Popup should render position corretly 3`] = `
+"<!--teleport start-->
+<transition-stub>
+  <div class=\\"vvm-popup--overlay\\"></div>
+</transition-stub>
+<transition-stub>
+  <div class=\\"vvm-popup vvm-popup--bottom\\"></div>
+</transition-stub>
+<!--teleport end-->"
+`;
+
+exports[`Popup should render position corretly 4`] = `
+"<!--teleport start-->
+<transition-stub>
+  <div class=\\"vvm-popup--overlay\\"></div>
+</transition-stub>
+<transition-stub>
+  <div class=\\"vvm-popup vvm-popup--right\\"></div>
+</transition-stub>
+<!--teleport end-->"
+`;
+
+exports[`Popup should render position corretly 5`] = `
+"<!--teleport start-->
+<transition-stub>
+  <div class=\\"vvm-popup--overlay\\"></div>
+</transition-stub>
+<transition-stub>
+  <div class=\\"vvm-popup vvm-popup--left\\"></div>
+</transition-stub>
+<!--teleport end-->"
+`;
+
+exports[`Popup should render slot corretly 1`] = `
+"<!--teleport start-->
+<transition-stub>
+  <div class=\\"vvm-popup--overlay\\"></div>
+</transition-stub>
+<transition-stub>
+  <div class=\\"vvm-popup vvm-popup--center\\"><span>render slot</span></div>
+</transition-stub>
+<!--teleport end-->"
+`;

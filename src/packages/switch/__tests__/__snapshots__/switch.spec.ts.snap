@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switch should render active and click corretly 1`] = `
+"<label class=\\"vvm-switch --warning --active\\"><span class=\\"vvm-switch--radius --active\\"></span>
+  <!--v-if-->
+</label>"
+`;
+
+exports[`Switch should render disabled coreetly 1`] = `"<label class=\\"vvm-switch --warning --active\\"><span class=\\"vvm-switch--radius --active\\"></span><span class=\\"vvm-switch--disabled\\"></span></label>"`;
+
+exports[`Switch should render type corretly 1`] = `
+"<label class=\\"vvm-switch --default\\"><span class=\\"vvm-switch--radius --close\\"></span>
+  <!--v-if-->
+</label>"
+`;
+
+exports[`Switch should render type corretly 2`] = `
+"<label class=\\"vvm-switch --error\\"><span class=\\"vvm-switch--radius --close\\"></span>
+  <!--v-if-->
+</label>"
+`;
+
+exports[`Switch should render type corretly 3`] = `
+"<label class=\\"vvm-switch --success\\"><span class=\\"vvm-switch--radius --close\\"></span>
+  <!--v-if-->
+</label>"
+`;
+
+exports[`Switch should render type corretly 4`] = `
+"<label class=\\"vvm-switch --warning\\"><span class=\\"vvm-switch--radius --close\\"></span>
+  <!--v-if-->
+</label>"
+`;

@@ -4,7 +4,7 @@ exports[`Dialog should render cancel button and text correctly 1`] = `"<button c
 
 exports[`Dialog should render confirm button and text correctly 1`] = `"<button class=\\"vvm-button vvm-button--default vvm-button--text vvm-button--large --dialog-confirm\\"><div class=\\"text\\">确认</div></button>"`;
 
-exports[`Dialog should render dialog correctly 1`] = `"<div class=\\"vvm-dialog--body --none-title\\"><div class=\\"vvm-dialog--title\\">标题</div><div class=\\"vvm-dialog--content\\"></div><div class=\\"vvm-dialog--button vvm-hairline-top\\"><!--v-if--><button class=\\"vvm-button vvm-button--default vvm-button--text vvm-button--large --dialog-confirm\\"><div class=\\"text\\">确认</div></button></div></div>"`;
+exports[`Dialog should render dialog correctly 1`] = `"<div class=\\"vvm-dialog--body\\"><div class=\\"vvm-dialog--title\\">标题</div><div class=\\"vvm-dialog--content\\"></div><div class=\\"vvm-dialog--button vvm-hairline-top\\"><!--v-if--><button class=\\"vvm-button vvm-button--default vvm-button--text vvm-button--large --dialog-confirm\\"><div class=\\"text\\">确认</div></button></div></div>"`;
 
 exports[`Dialog should render msg slot correctly 1`] = `"<div class=\\"vvm-dialog--content\\"><span>custom msg</span></div>"`;
 
