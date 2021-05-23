@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-06 16:13:40
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-11 15:35:26
+ * @LastEditTime: 2021-05-21 10:32:11
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -50,7 +50,7 @@ declare const _default: {
 export default _default;`;
 
 fs.outputFile(
-  resolve(__dirname, '../lib/index.d.ts'),
+  resolve(__dirname, '../src/index.d.ts'),
   INPORT + INSTALL,
   'utf8'
 );

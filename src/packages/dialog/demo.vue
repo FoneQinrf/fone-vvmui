@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-09 11:20:41
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-14 16:29:30
+ * @LastEditTime: 2021-05-21 11:01:26
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -41,7 +41,7 @@ export default defineComponent({
     const show = ref(false);
 
     const alert = () => {
-      const dialog = Dialog.alert({
+      const dialog:any = Dialog.alert({
         msg: '这是提示内容',
         onConfirm: () => {
           dialog.close();

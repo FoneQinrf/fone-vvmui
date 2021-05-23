@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkbox should render textTheme and label corretly 1`] = `"<label class=\\"vvm-checkbox --error --text-theme\\"><span class=\\"vvm-checkbox--icon vvm-ignore\\"><transition-stub><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconroundcheckfill --checkbox-icon\\" style=\\"font-size: 24px; width: 24px; height: 24px;\\"></i></transition-stub></span><span class=\\"vvm-checkbox--label\\">checkbox</span></label>"`;
+
+exports[`Checkbox should render type and textTheme corretly 1`] = `"<div class=\\"vvm-checkboxgroup --inline\\"><label class=\\"vvm-checkbox --success --text-theme\\"><span class=\\"vvm-checkbox--icon vvm-ignore\\"><transition-stub><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconroundcheckfill --checkbox-icon\\" style=\\"font-size: 24px; width: 24px; height: 24px;\\"></i></transition-stub></span><span class=\\"vvm-checkbox--label\\">checkbox-1</span></label><label class=\\"vvm-checkbox --success\\"><span class=\\"vvm-checkbox--icon vvm-ignore\\"><transition-stub><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconroundcheckfill --checkbox-icon\\" style=\\"font-size: 24px; width: 24px; height: 24px; display: none;\\"></i></transition-stub></span><span class=\\"vvm-checkbox--label\\">checkbox-2</span></label><label class=\\"vvm-checkbox --success\\"><span class=\\"vvm-checkbox--icon vvm-ignore\\"><transition-stub><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconroundcheckfill --checkbox-icon\\" style=\\"font-size: 24px; width: 24px; height: 24px; display: none;\\"></i></transition-stub></span><span class=\\"vvm-checkbox--label\\">checkbox-3</span></label></div>"`;
+
+exports[`Checkbox should render type corretly 1`] = `
+"<label class=\\"vvm-checkbox --default\\"><span class=\\"vvm-checkbox--icon vvm-ignore\\"><transition-stub><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconroundcheckfill --checkbox-icon\\" style=\\"font-size: 24px; width: 24px; height: 24px; display: none;\\"></i></transition-stub></span>
+  <!--v-if-->
+</label>"
+`;
+
+exports[`Checkbox should render type corretly 2`] = `
+"<label class=\\"vvm-checkbox --success\\"><span class=\\"vvm-checkbox--icon vvm-ignore\\"><transition-stub><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconroundcheckfill --checkbox-icon\\" style=\\"font-size: 24px; width: 24px; height: 24px; display: none;\\"></i></transition-stub></span>
+  <!--v-if-->
+</label>"
+`;
+
+exports[`Checkbox should render type corretly 3`] = `
+"<label class=\\"vvm-checkbox --warning\\"><span class=\\"vvm-checkbox--icon vvm-ignore\\"><transition-stub><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconroundcheckfill --checkbox-icon\\" style=\\"font-size: 24px; width: 24px; height: 24px; display: none;\\"></i></transition-stub></span>
+  <!--v-if-->
+</label>"
+`;
+
+exports[`Checkbox should render type corretly 4`] = `
+"<label class=\\"vvm-checkbox --error\\"><span class=\\"vvm-checkbox--icon vvm-ignore\\"><transition-stub><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconroundcheckfill --checkbox-icon\\" style=\\"font-size: 24px; width: 24px; height: 24px; display: none;\\"></i></transition-stub></span>
+  <!--v-if-->
+</label>"
+`;

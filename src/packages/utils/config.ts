@@ -2,13 +2,13 @@
  * @Author: Fone`峰
  * @Date: 2021-04-22 17:53:16
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-14 10:00:51
+ * @LastEditTime: 2021-05-21 11:26:02
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  */
 import { isArray, isPlainObject } from './is-config';
-import { cloneDeep, forEach } from 'lodash';
+import { cloneDeep } from 'lodash';
 
 /*****************Array***********************/
 /**
@@ -97,7 +97,7 @@ export const remove = (arr: any, item: any) => {
  * 数组乱序
  * @param arr
  */
-export const shuffle = (arr: Array<any>) => {
+export const shuffle = (arr: []) => {
   if (!isArray(arr)) {
     return console.error('传入非数组');
   }
