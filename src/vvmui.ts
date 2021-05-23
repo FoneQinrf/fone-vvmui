@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 12:17:01
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-13 14:45:57
+ * @LastEditTime: 2021-05-21 11:17:47
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -28,6 +28,8 @@ import ScrollCard from './packages/scroll-card/index.vue';
 import Checkbox from './packages/checkbox/index.vue';
 import CheckboxGroup from './packages/checkbox-group/index.vue';
 import Copy from '@/packages/copy';
+import Switch from './packages/switch/index.vue';
+import Utils from '@/packages/utils';
 
 // console.log(Dialog);
 // Dialog.info();
@@ -58,7 +60,8 @@ function install(app: App, options: any) {
     ActionSheet,
     Popup,
     Checkbox,
-    CheckboxGroup
+    CheckboxGroup,
+    Switch
   ];
   packages.forEach((item: any) => {
     if (item.install) {
@@ -85,9 +88,11 @@ export {
   Popup,
   Checkbox,
   CheckboxGroup,
-  Copy
+  Copy,
+  Switch,
+  Utils
 };
-export * from '@/packages/utils';
+
 export default { install, version: `vvmui-3x-${version}` };
 
 import '@/style.scss';

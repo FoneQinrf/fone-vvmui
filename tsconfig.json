@@ -14,7 +14,8 @@
     "types": ["vite/client", "jest"],
     "paths": {
       "@/*": ["src/*"]
-    }
+    },
+    "declaration": true
   },
   "include": [
     "src/**/*.ts",

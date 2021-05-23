@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-13 11:51:42
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-14 17:19:17
+ * @LastEditTime: 2021-05-15 21:21:23
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -104,7 +104,6 @@ export default defineComponent({
     };
 
     const click = () => {
-      console.log('点击');
       if (!props.disabled && props.data.length > 0) {
         showStatus.value = true;
       }

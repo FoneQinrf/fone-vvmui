@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button should render disabled and click correctly 1`] = `
+"<button class=\\"vvm-button vvm-button--default vvm-button--disabled vvm-button--loading\\" disabled=\\"\\"><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconloading vvm-loading\\" style=\\"font-size: 18px; width: 18px; height: 18px;\\"></i>
+  <!-- <span class=\\"vvm-loading-wrp\\"
+        ><Icon class=\\"vvm-loading\\" name=\\"iconloading\\"
+      /></span> -->加载中..
+</button>"
+`;
+
+exports[`Button should render loading and click correctly 1`] = `
+"<button class=\\"vvm-button vvm-button--default vvm-button--disabled vvm-button--loading\\" disabled=\\"\\"><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconloading vvm-loading\\" style=\\"font-size: 18px; width: 18px; height: 18px;\\"></i>
+  <!-- <span class=\\"vvm-loading-wrp\\"
+        ><Icon class=\\"vvm-loading\\" name=\\"iconloading\\"
+      /></span> -->加载中..
+</button>"
+`;
+
+exports[`Button should render size correctly 1`] = `
+"<button class=\\"vvm-button vvm-button--default vvm-button--large\\">
+  <div class=\\"text\\">button</div>
+</button>"
+`;
+
+exports[`Button should render type correctly 1`] = `
+"<button class=\\"vvm-button vvm-button--default vvm-button--normal\\">
+  <div class=\\"text\\">button</div>
+</button>"
+`;
+
+exports[`Button should render type correctly 2`] = `
+"<button class=\\"vvm-button vvm-button--success vvm-button--normal\\">
+  <div class=\\"text\\">button</div>
+</button>"
+`;
+
+exports[`Button should render type correctly 3`] = `
+"<button class=\\"vvm-button vvm-button--warning vvm-button--normal\\">
+  <div class=\\"text\\">button</div>
+</button>"
+`;
+
+exports[`Button should render type correctly 4`] = `
+"<button class=\\"vvm-button vvm-button--error vvm-button--normal\\">
+  <div class=\\"text\\">button</div>
+</button>"
+`;

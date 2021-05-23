@@ -929,7 +929,7 @@
 
 "@vue/test-utils@^2.0.0-rc.6":
   version "2.0.0-rc.6"
-  resolved "https://registry.npmjs.org/@vue/test-utils/-/test-utils-2.0.0-rc.6.tgz"
+  resolved "https://registry.yarnpkg.com/@vue/test-utils/-/test-utils-2.0.0-rc.6.tgz#d0aac24d20450d379e183f70542c0822670b8783"
   integrity sha512-0cnQBVH589PwgqWpyv1fgCAz+9Ram/MsvN3ZEAEVXi1aPuhUa22EudGc0WezQ9PKwR+L40NrBmt3JBXE2tSRRQ==
 
 abab@^2.0.3, abab@^2.0.5:
@@ -7600,14 +7600,25 @@ vue-tsc@^0.0.15:
   dependencies:
     unzipper "0.10.11"
 
-vue@^3.0.5:
+vue@^3.0.11, vue@^3.0.5:
   version "3.0.11"
-  resolved "https://registry.npmjs.org/vue/-/vue-3.0.11.tgz"
+  resolved "https://registry.yarnpkg.com/vue/-/vue-3.0.11.tgz#c82f9594cbf4dcc869241d4c8dd3e08d9a8f4b5f"
   integrity sha512-3/eUi4InQz8MPzruHYSTQPxtM3LdZ1/S/BvaU021zBnZi0laRUyH6pfuE4wtUeLvI8wmUNwj5wrZFvbHUXL9dw==
   dependencies:
     "@vue/compiler-dom" "3.0.11"
     "@vue/runtime-dom" "3.0.11"
     "@vue/shared" "3.0.11"
+
+vvmui@3.0.0-beta.5:
+  version "3.0.0-beta.5"
+  resolved "https://registry.yarnpkg.com/vvmui/-/vvmui-3.0.0-beta.5.tgz#5c09660b13dc02fbbae095a23dead0da67232077"
+  integrity sha512-gLa87qph6GhYClQuuZXWZvJ6QYeHTKPqLa7NnYk5lTyhmgX9qpMq0NAfd/YeIPpKuDTYtCrGOty9+wlN7V6szQ==
+  dependencies:
+    highlight.js "^10.7.2"
+    lodash "^4.17.21"
+    vite-plugin-md "^0.6.3"
+    vue "^3.0.5"
+    vue-router "^4.0.4"
 
 w3c-hr-time@^1.0.2:
   version "1.0.2"

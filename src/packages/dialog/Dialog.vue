@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-19 16:49:56
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-14 17:08:14
+ * @LastEditTime: 2021-05-17 10:58:52
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -63,6 +63,7 @@
 import { computed, defineComponent, onMounted, ref, watch } from 'vue';
 import Popup from '../popup/index.vue';
 import Button from '../button/index.vue';
+import { forEach } from 'lodash';
 
 const props = {
   msg: {
@@ -142,12 +143,13 @@ export default defineComponent({
     const classes = computed(() => {
       return {
         [`vvm-dialog--body`]: true,
-        [`--none-title`]: !props.showCancel && props.showConfirm
+        [`--none-title`]: !props.showCancel && !props.showConfirm
       };
     });
 
     const close = () => {
       emit('close');
+      update(false);
     };
 
     const onCancel = () => {
@@ -155,12 +157,14 @@ export default defineComponent({
         show.value = false;
       }
       emit('cancel');
+      update(false);
     };
     const onConfirm = () => {
       if (props.onConfirmClose) {
         show.value = false;
       }
       emit('confirm');
+      update(false);
     };
 
     return {

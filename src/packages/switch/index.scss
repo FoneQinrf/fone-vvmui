@@ -1,0 +1,93 @@
+.vvm-switch {
+  display: inline-block;
+  width: 104px;
+  height: 48px;
+  background-color: $B4;
+  border-radius: 48px;
+  position: relative;
+  transition: all 0.25s;
+  &.--default {
+    &.--active {
+      background-color: $default-color;
+    }
+    .vvm-switch--radius {
+      &.--active {
+        border: 1px solid $default-color;
+      }
+    }
+  }
+  &.--error {
+    &.--active {
+      background-color: $error-color;
+    }
+    .vvm-switch--radius {
+      &.--active {
+        border: 1px solid $error-color;
+      }
+    }
+  }
+  &.--success {
+    &.--active {
+      background-color: $success-color;
+    }
+    .vvm-switch--radius {
+      &.--active {
+        border: 1px solid $success-color;
+      }
+    }
+  }
+  &.--warning {
+    &.--active {
+      background-color: $warning-color;
+    }
+    .vvm-switch--radius {
+      &.--active {
+        border: 1px solid $warning-color;
+      }
+    }
+  }
+  &--radius {
+    display: inline-block;
+    height: 48px;
+    width: 48px;
+    background-color: #fff;
+    border-radius: 48px;
+    position: absolute;
+    transition: all 0.3s;
+    border-radius: 100%;
+    box-sizing: border-box;
+    &.--close {
+      left: 0;
+      border: 1px solid $B4;
+    }
+    &.--active {
+      left: 100%;
+      transform: translateX(-100%);
+    }
+  }
+  &--disabled {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    opacity: 0.4;
+    top: 0;
+    left: 0;
+  }
+  &--text {
+    position: absolute;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 14px;
+    &.--close {
+      right: 0;
+      padding-right: 22px;
+    }
+    &.--active {
+      left: 0;
+      padding-left: 22px;
+    }
+  }
+}

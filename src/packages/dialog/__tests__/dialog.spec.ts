@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-05-14 10:53:16
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-14 16:31:32
+ * @LastEditTime: 2021-05-15 21:46:20
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -106,5 +106,41 @@ describe('Dialog', () => {
     wrapper.setProps({ showConfirm: false, showCancel: false });
     await nextTick();
     expect(wrapper.find('.vvm-dialog--button').exists()).toBe(false);
+  });
+
+  it('should cancel click correctly', async () => {
+    const dialog = mount(Dialog, {
+      props: { show: true, showCancel: true, onCancelClose: false }
+    });
+    await nextTick();
+    dialog.find('.--dialog-cancel').trigger('click');
+    await nextTick();
+    expect(dialog.vm.show).toBe(true);
+    expect(dialog.find('.vvm-dialog--body').exists()).toBe(true);
+
+    dialog.setProps({ onCancelClose: true });
+    await nextTick();
+    dialog.find('.--dialog-cancel').trigger('click');
+    await nextTick();
+    expect(dialog.vm.show).toBe(false);
+    expect(dialog.find('.vvm-dialog--body').exists()).toBe(false);
+  });
+
+  it('should confirm click correctly', async () => {
+    const dialog = mount(Dialog, {
+      props: { show: true }
+    });
+    await nextTick();
+    dialog.find('.--dialog-confirm').trigger('click');
+    await nextTick();
+    expect(dialog.vm.show).toBe(true);
+    expect(dialog.find('.vvm-dialog--body').exists()).toBe(true);
+
+    dialog.setProps({ onConfirmClose: true });
+    await nextTick();
+    dialog.find('.--dialog-confirm').trigger('click');
+    await nextTick();
+    expect(dialog.vm.show).toBe(false);
+    expect(dialog.find('.vvm-dialog--body').exists()).toBe(false);
   });
 });

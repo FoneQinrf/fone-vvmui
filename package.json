@@ -3,7 +3,7 @@
   "npm": {
     "tag": "beta"
   },
-  "version": "3.0.0-beta.5",
+  "version": "3.0.0-beta.6",
   "author": "Fone`峰",
   "main": "lib/vvmui.umd.js",
   "module": "lib/vvmui.es.js",
@@ -28,7 +28,7 @@
     "build": "vite build",
     "serve": "vite preview",
     "build:vvmui": "vite build --config vite.config.vvmui.ts",
-    "build:prod": "npm run build:vvmui && node config/config.mkdir.types.js && node config/config.copy.themes.js && npm run build",
+    "build:prod": "npm run build:vvmui && node config/config.copy.types.js && node config/config.copy.themes.js && npm run build",
     "dev:ui": "vite --config vite.config.vvmui.ts",
     "dev": "concurrently \"npm run dev:vite\" \"npm run watch:css\"",
     "watch:css": "gulp --gulpfile gulpfile.js",
@@ -38,8 +38,9 @@
     "highlight.js": "^10.7.2",
     "lodash": "^4.17.21",
     "vite-plugin-md": "^0.6.3",
-    "vue": "^3.0.5",
-    "vue-router": "^4.0.4"
+    "vue": "^3.0.11",
+    "vue-router": "^4.0.4",
+    "vvmui": "3.0.0-beta.5"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",
