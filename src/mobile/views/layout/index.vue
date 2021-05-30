@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-07 14:42:03
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-12 13:39:10
+ * @LastEditTime: 2021-05-25 15:27:15
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -94,7 +94,7 @@ export default defineComponent({
 
 <style lang="scss">
 .demo-padding {
-  padding: 0 20px 0px 20px;
+  padding: 0 20px 20px 20px;
 }
 h4 {
   padding: 20px 0 10px 0;

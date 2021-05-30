@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-05-21 10:30:48
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-21 11:32:23
+ * @LastEditTime: 2021-05-25 10:49:51
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -48,6 +48,7 @@ declare class Radio extends UIComponent {}
 declare class ScrollCard extends UIComponent {}
 declare class Switch extends UIComponent {}
 declare class Toast extends ToastComponent {}
+declare class Picker extends UIComponent {}
 declare class Utils {
   static find(a: [], b: [], c?: string): void;
   static sort(a: [], b?: boolean): void;
@@ -94,7 +95,8 @@ export {
   ScrollCard,
   Switch,
   Toast,
-  Utils
+  Utils,
+  Picker
 };
 declare const _default: {
   install: typeof install;

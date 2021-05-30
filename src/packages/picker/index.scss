@@ -1,0 +1,42 @@
+.vvm-picker {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  flex: 1;
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__scroll {
+    transition: all 0.5s cubic-bezier(0, 0.5, 0.54, 0.76);
+  }
+  &__wrp {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    cursor: grab;
+  }
+  &__mask {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    box-sizing: border-box;
+    cursor: grab;
+    &.--top {
+      top: 0;
+      background: linear-gradient(
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.4)
+      );
+    }
+    &.--bottom {
+      bottom: 0;
+      background: linear-gradient(
+        rgba(255, 255, 255, 0.4),
+        rgba(255, 255, 255, 0.9)
+      );
+    }
+  }
+}
