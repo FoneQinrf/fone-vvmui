@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-13 11:51:58
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-14 17:19:35
+ * @LastEditTime: 2021-05-30 17:02:37
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -250,7 +250,7 @@ export default {
 |------|------------|------------|------------|------------|
 | data  | 选项数据源      | Array       | - | - |
 | v-model  | 选中数据中的`value`   | String | Number     | - | - |
-| placeholder  | 占位内容     | String       | 无 | 请选择内容 |
+| placeholder  | 占位内容     | String       | - | 请选择内容 |
 | disabled  | 是否禁用     | Boolean    | `true` `false` | false |
 | is-cancel  | 是否是否显示取消按钮     | Boolean  | `true` `false` | false |
 | cancel-text  | 取消按钮文字    | String  | - | 取消 |

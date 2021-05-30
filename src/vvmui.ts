@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 12:17:01
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-21 11:17:47
+ * @LastEditTime: 2021-05-25 10:49:21
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -30,6 +30,7 @@ import CheckboxGroup from './packages/checkbox-group/index.vue';
 import Copy from '@/packages/copy';
 import Switch from './packages/switch/index.vue';
 import Utils from '@/packages/utils';
+import Picker from './packages/picker/index.vue';
 
 // console.log(Dialog);
 // Dialog.info();
@@ -61,7 +62,8 @@ function install(app: App, options: any) {
     Popup,
     Checkbox,
     CheckboxGroup,
-    Switch
+    Switch,
+    Picker
   ];
   packages.forEach((item: any) => {
     if (item.install) {
@@ -90,7 +92,8 @@ export {
   CheckboxGroup,
   Copy,
   Switch,
-  Utils
+  Utils,
+  Picker
 };
 
 export default { install, version: `vvmui-3x-${version}` };
