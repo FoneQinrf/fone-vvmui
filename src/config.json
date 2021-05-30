@@ -40,6 +40,10 @@
         {
           "name": "ScrollCard - 滑动视图",
           "path": "scroll-card"
+        },
+        {
+          "name": "Picker - 选择器",
+          "path": "picker"
         }
       ]
     },
