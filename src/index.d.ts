@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-05-21 10:30:48
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-25 10:49:51
+ * @LastEditTime: 2021-06-01 11:03:45
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -25,6 +25,9 @@ declare class DialogComponent extends UIComponent {
 declare class ActionSheetCompnent extends UIComponent {
   static show(opts: object): void;
   static cancel(): void;
+}
+declare class PickerGroupCompnent extends UIComponent {
+  static show(opts: object): void;
 }
 declare class ActionSheet extends ActionSheetCompnent {}
 declare class Button extends UIComponent {}
@@ -49,6 +52,7 @@ declare class ScrollCard extends UIComponent {}
 declare class Switch extends UIComponent {}
 declare class Toast extends ToastComponent {}
 declare class Picker extends UIComponent {}
+declare class PickerGroup extends PickerGroupCompnent {}
 declare class Utils {
   static find(a: [], b: [], c?: string): void;
   static sort(a: [], b?: boolean): void;
@@ -96,7 +100,8 @@ export {
   Switch,
   Toast,
   Utils,
-  Picker
+  Picker,
+  PickerGroup
 };
 declare const _default: {
   install: typeof install;

@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-09 11:20:41
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-21 11:04:11
+ * @LastEditTime: 2021-05-31 11:25:15
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -45,7 +45,7 @@
 
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
-import { ActionSheet, Toast } from 'vvmui';
+import { ActionSheet, Toast } from '@/vvmui';
 
 export default defineComponent({
   setup() {

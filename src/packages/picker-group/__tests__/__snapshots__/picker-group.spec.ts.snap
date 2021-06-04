@@ -1,0 +1,228 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PickerGroup should async columns and modelValue render corretly 1`] = `
+"<div class=\\"vvm-picker-group\\">
+  <div class=\\"vvm-input vvm-input--right\\">
+    <!--v-if--><input class=\\"vvm-input--text\\" type=\\"text\\" readonly=\\"\\" placeholder=\\"请选择\\">
+    <!--v-if-->
+  </div>
+  <!--teleport start-->
+  <transition-stub>
+    <div class=\\"vvm-popup--overlay\\"></div>
+  </transition-stub>
+  <transition-stub>
+    <div class=\\"vvm-popup vvm-popup--bottom\\">
+      <div class=\\"vvm-picker-group__body\\">
+        <div class=\\"vvm-picker-group__top\\"><span class=\\"vvm-picker-group__btu __cancel\\">取消</span><span class=\\"vvm-picker-group__btu __confirm\\">确认</span></div>
+        <div class=\\"vvm-picker-group__columns\\">
+          <div class=\\"vvm-picker\\" style=\\"height: 252px;\\">
+            <div class=\\"vvm-picker__wrp\\">
+              <div class=\\"vvm-picker__scroll\\" style=\\"height: 252px; transform: translateY(108px);\\">
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">浙江</p>
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">江苏</p>
+              </div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --top vvm-hairline-bottom\\"></div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --bottom vvm-hairline-top\\"></div>
+            </div>
+          </div>
+          <div class=\\"vvm-picker\\" style=\\"height: 252px;\\">
+            <div class=\\"vvm-picker__wrp\\">
+              <div class=\\"vvm-picker__scroll\\" style=\\"height: 252px; transform: translateY(108px);\\">
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">杭州</p>
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">宁波</p>
+              </div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --top vvm-hairline-bottom\\"></div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --bottom vvm-hairline-top\\"></div>
+            </div>
+          </div>
+          <div class=\\"vvm-picker\\" style=\\"height: 252px;\\">
+            <div class=\\"vvm-picker__wrp\\">
+              <div class=\\"vvm-picker__scroll\\" style=\\"height: 252px; transform: translateY(108px);\\">
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">西湖</p>
+              </div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --top vvm-hairline-bottom\\"></div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --bottom vvm-hairline-top\\"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition-stub>
+  <!--teleport end-->
+</div>"
+`;
+
+exports[`PickerGroup should async columns and modelValue render corretly 2`] = `
+"<div class=\\"vvm-picker-group\\">
+  <div class=\\"vvm-input vvm-input--right\\">
+    <!--v-if--><input class=\\"vvm-input--text\\" type=\\"text\\" readonly=\\"\\" placeholder=\\"请选择\\">
+    <!--v-if-->
+  </div>
+  <!--teleport start-->
+  <transition-stub>
+    <div class=\\"vvm-popup--overlay\\"></div>
+  </transition-stub>
+  <transition-stub>
+    <div class=\\"vvm-popup vvm-popup--bottom\\">
+      <div class=\\"vvm-picker-group__body\\">
+        <div class=\\"vvm-picker-group__top\\"><span class=\\"vvm-picker-group__btu __cancel\\">取消</span><span class=\\"vvm-picker-group__btu __confirm\\">确认</span></div>
+        <div class=\\"vvm-picker-group__columns\\">
+          <div class=\\"vvm-picker\\" style=\\"height: 252px;\\">
+            <div class=\\"vvm-picker__wrp\\">
+              <div class=\\"vvm-picker__scroll\\" style=\\"height: 252px; transform: translateY(72px);\\">
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">浙江</p>
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">江苏</p>
+              </div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --top vvm-hairline-bottom\\"></div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --bottom vvm-hairline-top\\"></div>
+            </div>
+          </div>
+          <div class=\\"vvm-picker\\" style=\\"height: 252px;\\">
+            <div class=\\"vvm-picker__wrp\\">
+              <div class=\\"vvm-picker__scroll\\" style=\\"height: 252px; transform: translateY(72px);\\">
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">南京</p>
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">苏州</p>
+              </div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --top vvm-hairline-bottom\\"></div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --bottom vvm-hairline-top\\"></div>
+            </div>
+          </div>
+          <div class=\\"vvm-picker\\" style=\\"height: 252px;\\">
+            <div class=\\"vvm-picker__wrp\\">
+              <div class=\\"vvm-picker__scroll\\" style=\\"height: 252px; transform: translateY(72px);\\">
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">拙政园</p>
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">狮子林</p>
+              </div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --top vvm-hairline-bottom\\"></div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --bottom vvm-hairline-top\\"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition-stub>
+  <!--teleport end-->
+</div>"
+`;
+
+exports[`PickerGroup should close render corretly 1`] = `
+"<div class=\\"vvm-picker-group\\">
+  <div class=\\"vvm-input vvm-input--right\\">
+    <!--v-if--><input class=\\"vvm-input--text\\" type=\\"text\\" readonly=\\"\\" placeholder=\\"请选择\\">
+    <!--v-if-->
+  </div>
+  <!--teleport start-->
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <transition-stub>
+    <!--v-if-->
+  </transition-stub>
+  <!--teleport end-->
+</div>"
+`;
+
+exports[`PickerGroup should columns render corretly 1`] = `
+"<div class=\\"vvm-picker-group\\">
+  <div class=\\"vvm-input vvm-input--right\\">
+    <!--v-if--><input class=\\"vvm-input--text\\" type=\\"text\\" readonly=\\"\\" placeholder=\\"请选择\\">
+    <!--v-if-->
+  </div>
+  <!--teleport start-->
+  <transition-stub>
+    <div class=\\"vvm-popup--overlay\\"></div>
+  </transition-stub>
+  <transition-stub>
+    <div class=\\"vvm-popup vvm-popup--bottom\\">
+      <div class=\\"vvm-picker-group__body\\">
+        <div class=\\"vvm-picker-group__top\\"><span class=\\"vvm-picker-group__btu __cancel\\">取消</span><span class=\\"vvm-picker-group__btu __confirm\\">确认</span></div>
+        <div class=\\"vvm-picker-group__columns\\">
+          <div class=\\"vvm-picker\\" style=\\"height: 252px;\\">
+            <div class=\\"vvm-picker__wrp\\">
+              <div class=\\"vvm-picker__scroll\\" style=\\"height: 252px; transform: translateY(108px);\\">
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">浙江</p>
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">江苏</p>
+              </div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --top vvm-hairline-bottom\\"></div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --bottom vvm-hairline-top\\"></div>
+            </div>
+          </div>
+          <div class=\\"vvm-picker\\" style=\\"height: 252px;\\">
+            <div class=\\"vvm-picker__wrp\\">
+              <div class=\\"vvm-picker__scroll\\" style=\\"height: 252px; transform: translateY(108px);\\">
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">杭州</p>
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">宁波</p>
+              </div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --top vvm-hairline-bottom\\"></div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --bottom vvm-hairline-top\\"></div>
+            </div>
+          </div>
+          <div class=\\"vvm-picker\\" style=\\"height: 252px;\\">
+            <div class=\\"vvm-picker__wrp\\">
+              <div class=\\"vvm-picker__scroll\\" style=\\"height: 252px; transform: translateY(108px);\\">
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">西湖</p>
+              </div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --top vvm-hairline-bottom\\"></div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --bottom vvm-hairline-top\\"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition-stub>
+  <!--teleport end-->
+</div>"
+`;
+
+exports[`PickerGroup should v-model and chooseText render corretly 1`] = `
+"<div class=\\"vvm-picker-group\\">
+  <div class=\\"vvm-input vvm-input--right\\">
+    <!--v-if--><input class=\\"vvm-input--text\\" type=\\"text\\" readonly=\\"\\" placeholder=\\"请选择\\">
+    <!--v-if-->
+  </div>
+  <!--teleport start-->
+  <transition-stub>
+    <div class=\\"vvm-popup--overlay\\"></div>
+  </transition-stub>
+  <transition-stub>
+    <div class=\\"vvm-popup vvm-popup--bottom\\">
+      <div class=\\"vvm-picker-group__body\\">
+        <div class=\\"vvm-picker-group__top\\"><span class=\\"vvm-picker-group__btu __cancel\\">取消</span><span class=\\"vvm-picker-group__btu __confirm\\">确认</span></div>
+        <div class=\\"vvm-picker-group__columns\\">
+          <div class=\\"vvm-picker\\" style=\\"height: 252px;\\">
+            <div class=\\"vvm-picker__wrp\\">
+              <div class=\\"vvm-picker__scroll\\" style=\\"height: 252px; transform: translateY(72px);\\">
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">浙江</p>
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">江苏</p>
+              </div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --top vvm-hairline-bottom\\"></div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --bottom vvm-hairline-top\\"></div>
+            </div>
+          </div>
+          <div class=\\"vvm-picker\\" style=\\"height: 252px;\\">
+            <div class=\\"vvm-picker__wrp\\">
+              <div class=\\"vvm-picker__scroll\\" style=\\"height: 252px; transform: translateY(72px);\\">
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">南京</p>
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">苏州</p>
+              </div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --top vvm-hairline-bottom\\"></div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --bottom vvm-hairline-top\\"></div>
+            </div>
+          </div>
+          <div class=\\"vvm-picker\\" style=\\"height: 252px;\\">
+            <div class=\\"vvm-picker__wrp\\">
+              <div class=\\"vvm-picker__scroll\\" style=\\"height: 252px; transform: translateY(72px);\\">
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">拙政园</p>
+                <p style=\\"height: 36px;\\" class=\\"vvm-picker__item vvm-ellipsis\\">狮子林</p>
+              </div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --top vvm-hairline-bottom\\"></div>
+              <div style=\\"height: 108px;\\" class=\\"vvm-picker__mask --bottom vvm-hairline-top\\"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </transition-stub>
+  <!--teleport end-->
+</div>"
+`;

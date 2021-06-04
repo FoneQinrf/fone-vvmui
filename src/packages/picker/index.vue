@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-05-25 10:46:42
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-30 16:32:40
+ * @LastEditTime: 2021-06-01 12:56:31
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -24,7 +24,7 @@
           :style="itemStyle"
           class="vvm-picker__item vvm-ellipsis"
         >
-          {{ item.label }}
+          {{ item[label] }}
         </p>
       </div>
       <div
@@ -54,9 +54,12 @@ export default defineComponent({
       offset: 0,
       startOffset: 0,
       index: props.index,
-      count: 5,
+      count: 7,
       state: true
     });
+
+    // const instance = getCurrentInstance();
+    // console.log(instance);
 
     const style = computed(() => {
       return {
@@ -106,12 +109,10 @@ export default defineComponent({
     };
     const onTouchmove = (e: any) => {
       const Y = e.clientY || e.touches[0].clientY;
-      const deltaY = Y - opts.startY;
-      const start = -(
-        opts.count * props.height +
-        height.value +
-        props.height * 2
-      );
+      const deltaY = (Y - opts.startY) * 1.08;
+      //最小可滑动距离负两个高度
+      const start = -(opts.count * props.height + props.height);
+      //最大可滑动距离正两个高度
       const end = props.height * opts.count - height.value + props.height;
       opts.offset = range(opts.startOffset + deltaY, [start, end]);
     };
@@ -130,7 +131,7 @@ export default defineComponent({
     };
     const onTransitionend = () => {
       if (opts.state) {
-        emit('change', opts.index, props.columns[opts.index]);
+        emit('change', opts.index, props.columns[opts.index], props.groupKey);
       }
     };
 
@@ -171,12 +172,17 @@ export default defineComponent({
     },
     height: {
       type: Number,
-      default: 38
+      default: 36
     },
     index: {
       type: Number,
       default: 0
-    }
+    },
+    label: {
+      type: String,
+      default: 'label'
+    },
+    groupKey: Number
   }
 });
 </script>
