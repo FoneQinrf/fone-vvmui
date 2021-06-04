@@ -1,0 +1,24 @@
+.vvm-picker-group {
+  &__body {
+    background: #fff;
+  }
+  &__top {
+    display: flex;
+    padding: 0 30px;
+    justify-content: space-between;
+  }
+  &__btu {
+    padding: 14px 0;
+    font-weight: bold;
+    &.__cancel {
+      color: $B3;
+    }
+    &.__confirm {
+      color: $default-color;
+    }
+  }
+  &__columns {
+    display: flex;
+    padding: 16px 0;
+  }
+}

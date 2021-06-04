@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-05 09:32:37
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-06 16:15:03
+ * @LastEditTime: 2021-05-31 11:00:48
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -42,14 +42,14 @@ export default defineComponent({
   box-sizing: border-box;
   padding: 30px 0;
   .title {
-    padding: 10px 0 10px 30px;
+    padding: 10px 0 10px 20px;
     font-weight: bold;
     font-size: 16px;
   }
   .nav-tag {
     display: block;
     color: #333;
-    padding: 10px 0 10px 50px;
+    padding: 10px 0 10px 30px;
     font-weight: 450;
     &.router-link-active {
       color: $default-color;
