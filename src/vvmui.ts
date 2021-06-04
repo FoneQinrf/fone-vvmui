@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 12:17:01
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-25 10:49:21
+ * @LastEditTime: 2021-05-31 11:15:06
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -31,6 +31,7 @@ import Copy from '@/packages/copy';
 import Switch from './packages/switch/index.vue';
 import Utils from '@/packages/utils';
 import Picker from './packages/picker/index.vue';
+import PickerGroup from './packages/picker-group';
 
 // console.log(Dialog);
 // Dialog.info();
@@ -41,6 +42,7 @@ function install(app: App, options: any) {
   app.config.globalProperties.$VVMUI = options;
   app.config.globalProperties.$ActionSheet = ActionSheet;
   app.config.globalProperties.$Dialog = Dialog;
+  app.config.globalProperties.$PickerGroup = PickerGroup;
   setConfig(options);
   app.directive('copy', Copy);
 
@@ -63,7 +65,8 @@ function install(app: App, options: any) {
     Checkbox,
     CheckboxGroup,
     Switch,
-    Picker
+    Picker,
+    PickerGroup
   ];
   packages.forEach((item: any) => {
     if (item.install) {
@@ -93,7 +96,8 @@ export {
   Copy,
   Switch,
   Utils,
-  Picker
+  Picker,
+  PickerGroup
 };
 
 export default { install, version: `vvmui-3x-${version}` };

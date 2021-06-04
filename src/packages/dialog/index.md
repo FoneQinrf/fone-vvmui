@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-16 17:28:06
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-14 16:53:48
+ * @LastEditTime: 2021-06-03 11:11:30
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -146,7 +146,7 @@ Dialog.alert({
 ### 方法
 | 方法 | 说明 | 参数 | 返回值 | 
 |------|------------|------------|------------|
-| Dialog.alert |  展示提示 | `options` | 组件的实例以及关闭关闭的方法 | 
+| Dialog.alert |  展示提示 | `options` | 组件的实例以及关闭的方法 | 
 
 </Card>
 <br>
@@ -163,13 +163,11 @@ Dialog.alert({
 | showConfirm  |  是否显示确认按钮  |  Boolean  | `true` `false` | true |
 | cancelText  |  取消按钮的文字  |  String  | - | 取消 |
 | confirmText  |  确认按钮的文字  |  String  | - | 确认 |
-| confirmText  |  确认按钮的文字  |  String  | - | 确认 |
 | onCancelClose  |  是否点击取消关闭  |  Boolean  | `true` `false` | true |
 | onConfirmClose  |  是否点击确认关闭  |  Boolean  | `true` `false` | false |
 | onConfirm  |  点击确认按钮回调函数  |  Function  | - | - |
 | onCancel  |  点击取消按钮回调函数  |  Function  | - | - |
 | onClose  |  提示关闭回调函数  |  Function  | - | - |
-| teleport  |  期望渲染在的节点内  | String  | - | - |
 
 
 </Card>
