@@ -69,6 +69,10 @@
         {
           "name": "Switch - 开关",
           "path": "switch"
+        },
+        {
+          "name": "Rate - 评分",
+          "path": "rate"
         }
       ]
     },

@@ -2,12 +2,12 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 12:17:01
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-31 11:15:06
+ * @LastEditTime: 2021-06-14 12:03:36
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
  */
-
+// @ts-ignore
 import { version } from '../package.json';
 import { App } from 'vue';
 import Button from './packages/button/index.vue';
@@ -32,6 +32,8 @@ import Switch from './packages/switch/index.vue';
 import Utils from '@/packages/utils';
 import Picker from './packages/picker/index.vue';
 import PickerGroup from './packages/picker-group';
+import Rate from './packages/rate/index.vue';
+import Notify from './packages/notify';
 
 // console.log(Dialog);
 // Dialog.info();
@@ -43,6 +45,8 @@ function install(app: App, options: any) {
   app.config.globalProperties.$ActionSheet = ActionSheet;
   app.config.globalProperties.$Dialog = Dialog;
   app.config.globalProperties.$PickerGroup = PickerGroup;
+  app.config.globalProperties.$Notify = Notify;
+  app.config.globalProperties.$Toast = Toast;
   setConfig(options);
   app.directive('copy', Copy);
 
@@ -56,7 +60,6 @@ function install(app: App, options: any) {
     Icon,
     CellGroup,
     Cell,
-    Toast,
     Input,
     Form,
     FormItem,
@@ -66,7 +69,8 @@ function install(app: App, options: any) {
     CheckboxGroup,
     Switch,
     Picker,
-    PickerGroup
+    PickerGroup,
+    Rate
   ];
   packages.forEach((item: any) => {
     if (item.install) {
@@ -97,7 +101,9 @@ export {
   Switch,
   Utils,
   Picker,
-  PickerGroup
+  PickerGroup,
+  Rate,
+  Notify
 };
 
 export default { install, version: `vvmui-3x-${version}` };

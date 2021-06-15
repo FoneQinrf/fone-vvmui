@@ -1,0 +1,26 @@
+.vvm-notify {
+  &__body {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: $toast;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 16px;
+    &.__default {
+      background: $default-color;
+    }
+    &.__success {
+      background: $success-color;
+    }
+    &.__warning {
+      background: $warning-color;
+    }
+    &.__error {
+      background: $error-color;
+    }
+  }
+}
