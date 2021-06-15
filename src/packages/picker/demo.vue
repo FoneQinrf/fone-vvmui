@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 15:22:58
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-06-03 11:58:16
+ * @LastEditTime: 2021-06-07 11:11:23
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -37,7 +37,7 @@
     <CellGroup>
       <Cell @click="show" title="调起" arrow></Cell>
     </CellGroup>
-    <template v-if="true">
+    <template v-if="false">
       <h4>测试异步行为</h4>
       <Form>
         <FormItem label="请选择">

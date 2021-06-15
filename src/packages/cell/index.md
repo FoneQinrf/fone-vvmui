@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-08 15:59:25
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-14 16:57:24
+ * @LastEditTime: 2021-06-10 17:41:11
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -99,7 +99,7 @@ app.use(CellGroup);
 | content  | 内容      | String    | - | - |
 | arrow  | 是否启用右侧箭头       | Boolean  | `true` `false` | false |
 | arrow-icon  | 右侧自定义`icon`    | String  | - | iconarrow-right-bold |
-| to  |   点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to)  | String  | - | - |
+| to  |   点击后跳转的目标路由对象，同 vue-router 的 <a el="nofollow" href="https://router.vuejs.org/zh/api/#to">to 属性</a>  | String  | - | - |
 | query  |  vue-router跳转需要携带的数据   | Object  | - | - |
 | url  | 点击后跳转的地址    | String | - | - |
 | replace  | 是否使用replace来跳转    | Boolean  | `true` `false` | false |

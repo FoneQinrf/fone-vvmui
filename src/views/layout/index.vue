@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-04 22:48:46
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-14 15:37:49
+ * @LastEditTime: 2021-06-11 15:51:27
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -49,7 +49,6 @@ export default defineComponent({
         nextTick(() => {
           el.handler = (e: any) => {
             if (e.target.className === 'copy') {
-              console.log(e.target.getAttribute('value'));
               const value = e.target.getAttribute('value');
               if (!value) {
                 console.log('无复制内容');

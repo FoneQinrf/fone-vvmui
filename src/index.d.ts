@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-05-21 10:30:48
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-06-01 11:03:45
+ * @LastEditTime: 2021-06-14 11:46:00
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -29,6 +29,10 @@ declare class ActionSheetCompnent extends UIComponent {
 declare class PickerGroupCompnent extends UIComponent {
   static show(opts: object): void;
 }
+declare class NotifyComponent {
+  static(msg?: string, opts?: object): void;
+  static name: string;
+}
 declare class ActionSheet extends ActionSheetCompnent {}
 declare class Button extends UIComponent {}
 declare class Card extends UIComponent {}
@@ -53,6 +57,8 @@ declare class Switch extends UIComponent {}
 declare class Toast extends ToastComponent {}
 declare class Picker extends UIComponent {}
 declare class PickerGroup extends PickerGroupCompnent {}
+declare class Rate extends UIComponent {}
+declare class Notify extends NotifyComponent {}
 declare class Utils {
   static find(a: [], b: [], c?: string): void;
   static sort(a: [], b?: boolean): void;
@@ -101,7 +107,9 @@ export {
   Toast,
   Utils,
   Picker,
-  PickerGroup
+  PickerGroup,
+  Rate,
+  Notify
 };
 declare const _default: {
   install: typeof install;

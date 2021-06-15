@@ -2,12 +2,12 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 15:21:42
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-05-14 16:57:42
+ * @LastEditTime: 2021-06-10 17:40:16
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
 -->
-## Button 按钮
+# Button 按钮
 ---
 
 <Card> 
@@ -158,7 +158,7 @@ export default {
 | loading  |  是否`loading`状态  | Boolean  | `true` `false` | false |
 | loading-text  |  `loading`状态时展示的内容 | String  | - | 加载中.. |
 | query  |  vue-router跳转需要携带的数据   | Object  | - | - |
-| to  |   点击后跳转的目标路由对象，同 vue-router 的 [to 属性](https://router.vuejs.org/zh/api/#to)  | String  | - | - |
+| to  |   点击后跳转的目标路由对象，同 vue-router 的 <a el="nofollow" href="https://router.vuejs.org/zh/api/#to">to 属性</a>  | String  | - | - |
 | url  | 点击后跳转的地址    | String | - | - |
 | replace  | 是否使用replace来跳转    | Boolean  | `true` `false` | false |
 

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Rate should count render corretly 1`] = `
+"<div class=\\"vvm-rate\\">
+  <div class=\\"vvm-rate__icon\\" style=\\"width: 26px; height: 26px;\\">
+    <transition-stub>
+      <!--v-if-->
+    </transition-stub><label class=\\"vvm-rate__defaultIcon\\"><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconpingfenxingxing\\" style=\\"font-size: 26px; width: 26px; height: 26px; color: rgb(224, 224, 235);\\"></i></label>
+  </div>
+  <div class=\\"vvm-rate__icon\\" style=\\"width: 26px; height: 26px;\\">
+    <transition-stub>
+      <!--v-if-->
+    </transition-stub><label class=\\"vvm-rate__defaultIcon\\"><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconpingfenxingxing\\" style=\\"font-size: 26px; width: 26px; height: 26px; color: rgb(224, 224, 235);\\"></i></label>
+  </div>
+  <div class=\\"vvm-rate__icon\\" style=\\"width: 26px; height: 26px;\\">
+    <transition-stub>
+      <!--v-if-->
+    </transition-stub><label class=\\"vvm-rate__defaultIcon\\"><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconpingfenxingxing\\" style=\\"font-size: 26px; width: 26px; height: 26px; color: rgb(224, 224, 235);\\"></i></label>
+  </div>
+  <div class=\\"vvm-rate__icon\\" style=\\"width: 26px; height: 26px;\\">
+    <transition-stub>
+      <!--v-if-->
+    </transition-stub><label class=\\"vvm-rate__defaultIcon\\"><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconpingfenxingxing\\" style=\\"font-size: 26px; width: 26px; height: 26px; color: rgb(224, 224, 235);\\"></i></label>
+  </div>
+  <div class=\\"vvm-rate__icon\\" style=\\"width: 26px; height: 26px;\\">
+    <transition-stub>
+      <!--v-if-->
+    </transition-stub><label class=\\"vvm-rate__defaultIcon\\"><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconpingfenxingxing\\" style=\\"font-size: 26px; width: 26px; height: 26px; color: rgb(224, 224, 235);\\"></i></label>
+  </div>
+  <div class=\\"vvm-rate__icon\\" style=\\"width: 26px; height: 26px;\\">
+    <transition-stub>
+      <!--v-if-->
+    </transition-stub><label class=\\"vvm-rate__defaultIcon\\"><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconpingfenxingxing\\" style=\\"font-size: 26px; width: 26px; height: 26px; color: rgb(224, 224, 235);\\"></i></label>
+  </div>
+  <div class=\\"vvm-rate__icon\\" style=\\"width: 26px; height: 26px;\\">
+    <transition-stub>
+      <!--v-if-->
+    </transition-stub><label class=\\"vvm-rate__defaultIcon\\"><i class=\\"vvm-iconfont vvm-icon vvm-ignore iconpingfenxingxing\\" style=\\"font-size: 26px; width: 26px; height: 26px; color: rgb(224, 224, 235);\\"></i></label>
+  </div>
+</div>"
+`;

@@ -1,0 +1,19 @@
+.vvm-rate {
+  display: flex;
+  &__icon {
+    padding: 0 4px;
+    position: relative;
+  }
+  &__defaultIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+  }
+  &__activeIcon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
+}
