@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 12:04:31
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-04-06 16:50:34
+ * @LastEditTime: 2021-06-17 15:59:17
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -29,5 +29,6 @@ body,
 #app {
   width: 100%;
   height: 100%;
+  user-select:none;
 }
 </style>

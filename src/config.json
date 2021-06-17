@@ -86,6 +86,10 @@
         {
           "name": "Dialog - 弹出框",
           "path": "dialog"
+        },
+        {
+          "name": "Notify - 消息通知",
+          "path": "notify"
         }
       ]
     }
