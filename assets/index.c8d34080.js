@@ -1,0 +1,1 @@
+import{d as s,p as a,a as o,o as e,c as d,w as c,b as t}from"./vendor.82c32546.js";var m=s({name:"Home"});const n=c();a("data-v-75f08986");const r={class:"demo-home"},v=t("div",{class:"top"},[t("img",{class:"logo",src:"/fone-vvmui/assets/logo.d2fb0001.png"})],-1);o();const f=n(((s,a,o,c,t,m)=>(e(),d("div",r,[v]))));m.render=f,m.__scopeId="data-v-75f08986";export default m;

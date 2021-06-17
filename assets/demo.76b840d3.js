@@ -1,0 +1,1 @@
+import{r as n,o,c as r,F as s,A as t,b as a}from"./vendor.82c32546.js";const l={};l.render=function(l,u){const e=n("Button");return o(),r("div",null,[(o(),r(s,null,t(200,(n=>a("div",null,[a(e)]))),64))])};export default l;

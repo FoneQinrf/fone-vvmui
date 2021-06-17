@@ -1,0 +1,1 @@
+import{r,o,c as t,b as n,s,k as a}from"./vendor.82c32546.js";const e={},u=a("ui");e.render=function(a,e){const i=r("router-link");return o(),t("div",null,[n(i,{to:"intro"},{default:s((()=>[u])),_:1})])};export default e;
