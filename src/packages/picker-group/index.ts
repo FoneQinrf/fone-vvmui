@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-05-31 10:15:02
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-06-01 11:17:18
+ * @LastEditTime: 2021-06-17 15:16:54
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -12,27 +12,6 @@ import PickerGroup from './index.vue';
 import { createAssign } from '../utils';
 
 const component = defineComponent(PickerGroup);
-// let App: any = null;
-
-// /**
-//  *
-//  * @param opts 初始化
-//  */
-// const install = (opts: any = {}) => {
-//   const container = document.createElement('div');
-//   container.className = opts.className || `vvm-picker-group__wrp`;
-//   document.body.appendChild(container);
-//   const instance: any = createVNode(
-//     component,
-//     createAssign(opts, { teleport: container, show: true, Element: container })
-//   );
-//   render(instance, container);
-//   App = instance;
-//   App.cancel = () => {
-//     createAssign(App.component.props, { show: false });
-//   };
-//   return App;
-// };
 
 class Install {
   public container: HTMLDivElement;
@@ -46,20 +25,16 @@ class Install {
       component,
       createAssign(opts, {
         teleport: this.container,
-        show: true,
         Element: this.container
       })
     );
     render(instance, this.container);
     this.App = instance;
+    //close
     this.App.cancel = () => {
-      createAssign(this.App.component.props, { show: false });
+      this.App.type.cancel();
     };
     return this.App;
-  }
-
-  cancel() {
-    createAssign(this.App.component.props, { show: false });
   }
 }
 
@@ -67,12 +42,5 @@ PickerGroup.show = (opts: any) => {
   const App = new Install(opts);
   return App;
 };
-
-// PickerGroup.cancel = () => {
-//   if (App) {
-//     createAssign(App.component.props, { show: false });
-//   }
-// };
-// PickerGroup.show();
 
 export default PickerGroup;

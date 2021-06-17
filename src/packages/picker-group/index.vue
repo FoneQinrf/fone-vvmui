@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-05-31 10:12:14
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-06-03 11:59:14
+ * @LastEditTime: 2021-06-17 15:14:47
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -58,7 +58,7 @@ import Picker from '../picker/index.vue';
 import Input from '../input/index.vue';
 import { getColumns, getIndex, getChooseValue, getChooseArr } from './utils';
 
-export default defineComponent({
+const App = defineComponent({
   name: 'PickerGroup',
   components: { Popup, Picker, Input },
   emits: ['change', 'update:modelValue', 'confirm', 'cancel', 'open', 'close'],
@@ -156,17 +156,20 @@ export default defineComponent({
 
     onMounted(() => {
       chooseText.value = chooseValue.value;
-      if (props.show) {
+      App.cancel = () => {
+        showStatus.value = false;
+      };
+      if (props.Element) {
         click();
       }
     });
 
-    watch(
-      () => props.show,
-      (val) => {
-        val ? click() : (showStatus.value = false);
-      }
-    );
+    // watch(
+    //   () => props.show,
+    //   (val) => {
+    //     val ? click() : (showStatus.value = false);
+    //   }
+    // );
 
     watch(
       () => props.modelValue,
@@ -261,4 +264,6 @@ export default defineComponent({
     }
   }
 });
+
+export default App;
 </script>

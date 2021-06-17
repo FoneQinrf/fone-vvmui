@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-06-10 15:06:03
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-06-15 11:55:51
+ * @LastEditTime: 2021-06-17 14:56:24
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -28,6 +28,12 @@
     <CellGroup>
       <Cell @click="show3" title="调起" arrow></Cell>
     </CellGroup>
+    <template v-if="false">
+      <h4>测试手动关闭</h4>
+      <CellGroup>
+        <Cell @click="show4" title="调起" arrow></Cell>
+      </CellGroup>
+    </template>
   </div>
 </template>
 
@@ -57,7 +63,14 @@ export default defineComponent({
       });
     };
 
-    return { show, show1, show2, show3 };
+    const show4 = () => {
+      const app: any = Notify('消息', { duration: 3000 });
+      setTimeout(() => {
+        app.cancel();
+      }, 1000);
+    };
+
+    return { show, show1, show2, show3, show4 };
   }
 });
 </script>
