@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-04 22:48:46
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-06-11 15:51:27
+ * @LastEditTime: 2021-06-17 15:53:14
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -90,6 +90,8 @@ export default defineComponent({
 .vvm-layout {
   width: 100%;
   display: flex;
+  padding-top: 60px;
+  position: relative;
 }
 .doc-main {
   flex-grow: 1;

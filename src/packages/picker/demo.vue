@@ -2,7 +2,7 @@
  * @Author: Fone`峰
  * @Date: 2021-04-02 15:22:58
  * @LastEditors: Fone`峰
- * @LastEditTime: 2021-06-07 11:11:23
+ * @LastEditTime: 2021-06-17 15:17:45
  * @Description: file content
  * @Email: qinrifeng@163.com
  * @Github: https://github.com/FoneQinrf
@@ -144,15 +144,15 @@ export default defineComponent({
     };
 
     const value1: any = ref([]);
-    const data1:any = ref([]);
+    const data1: any = ref([]);
 
     onMounted(() => {
       setTimeout(() => {
         value1.value = [1, 1, 1];
       }, 2000);
-      setTimeout(()=>{
+      setTimeout(() => {
         data1.value = data.value;
-      },3000)
+      }, 3000);
     });
 
     return { columns, data, value, show, value1, data1 };
